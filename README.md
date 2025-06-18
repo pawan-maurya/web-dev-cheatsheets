@@ -74,11 +74,8 @@ Please adhere to the following guidelines:
 - Update this README if adding new cheatsheets.
 
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 *Built with ❤️ for web developers. Contributions and feedback are welcome!*
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Built with ❤️ for web developers. Contributions and feedback are welcome!
