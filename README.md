@@ -23,11 +23,11 @@ To use the cheatsheets locally or contribute to the project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/web-developer-cheatsheets.git
+   git clone https://github.com/pawan-maurya/web-dev-cheatsheets.git
    ```
 2. **Navigate to the Project Directory**:
    ```bash
-   cd web-developer-cheatsheets
+   cd web-dev-cheatsheets
    ```
 3. **Open Cheatsheets**:
    - Open any cheatsheet (e.g., `javascript-cheatsheet/index.html`) in a web browser to view locally.
