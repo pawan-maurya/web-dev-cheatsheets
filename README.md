@@ -18,6 +18,10 @@ A curated collection of modern, visually appealing cheatsheets for web developme
 
 *For example:* To view the JavaScript cheatsheet, open `javascript-cheatsheet/index.html` in your browser or visit the hosted version at [JavaScript Cheatsheet](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html).
 
+**Preview:**
+![image](https://github.com/user-attachments/assets/1aaa98e0-8619-42eb-a273-c89a96291aaa)
+
+
 ## Features
 - **Modern Design**: Dark-themed, trendy UI with responsive layouts for easy reading.
 - **Comprehensive Content**: Covers essential web development topics with concise code snippets.
