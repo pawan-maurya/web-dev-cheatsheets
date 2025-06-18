@@ -5,12 +5,18 @@
 A curated collection of modern, visually appealing cheatsheets for web development technologies, designed to help developers quickly reference key concepts, syntax, and best practices. This library includes cheatsheets for HTML, CSS, JavaScript, and more, with a focus on clean design and practical examples.
 
 ## Table of Contents
+- [Available Cheatsheets](#available-cheatsheets)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Available Cheatsheets](#available-cheatsheets)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Available Cheatsheets
+- **JavaScript Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html) | Covers variables, functions, arrays, objects, loops, conditionals, and ES6+ features.
+- *More cheatsheets coming soon (e.g., HTML, CSS, React, etc.)!*
+
+*For example:* To view the JavaScript cheatsheet, open `javascript-cheatsheet/index.html` in your browser or visit the hosted version at [JavaScript Cheatsheet](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html).
 
 ## Features
 - **Modern Design**: Dark-themed, trendy UI with responsive layouts for easy reading.
@@ -38,12 +44,6 @@ To use the cheatsheets locally or contribute to the project, follow these steps:
 - **Searchable Content**: Each cheatsheet is organized into sections (e.g., Variables, Functions, Arrays) for quick navigation.
 - **Responsive Design**: Viewable on desktop, tablet, or mobile devices.
 - **Contribute**: Add new cheatsheets or improve existing ones by following the [Contributing](#contributing) guidelines.
-
-## Available Cheatsheets
-- **JavaScript Cheatsheet**: Covers variables, functions, arrays, objects, loops, conditionals, and ES6+ features.
-- *More cheatsheets coming soon (e.g., HTML, CSS, React, etc.)!*
-
-To view the JavaScript cheatsheet, open `javascript-cheatsheet/index.html` in your browser or visit the hosted version at `[Your GitHub Pages URL]`.
 
 ## Contributing
 We welcome contributions to expand and improve this library! To contribute:
