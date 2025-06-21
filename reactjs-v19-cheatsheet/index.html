@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React.js v19 Cheatsheet - Dark Mode - by CodersStudy</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Inter', sans-serif;
+                background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+                color: #e2e8f0;
+                line-height: 1.6;
+                font-size: 14px;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            .header {
+                text-align: center;
+                margin-bottom: 3rem;
+                background: linear-gradient(135deg, #61DAFB 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .header h1 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 0 0 30px rgba(97, 218, 251, 0.5);
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+                color: #94a3b8;
+                font-weight: 300;
+            }
+
+            .search-container {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .search-input {
+                width: 50%;
+                padding: 0.75rem 1rem;
+                border-radius: 8px;
+                border: 1px solid rgba(100, 116, 139, 0.2);
+                background: rgba(30, 41, 59, 0.7);
+                color: #e2e8f0;
+                font-size: 1rem;
+                font-family: 'Inter', sans-serif;
+                transition: all 0.3s ease;
+            }
+
+            .search-input:focus {
+                outline: none;
+                border-color: #61DAFB;
+                box-shadow: 0 0 15px rgba(97, 218, 251, 0.3);
+            }
+            
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .card {
+                background: rgba(30, 41, 59, 0.7);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(100, 116, 139, 0.2);
+                border-radius: 16px;
+                padding: 1.5rem;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            }
+            
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            }
+            
+            .card-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+            }
+            
+            .card-icon {
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(135deg, #61DAFB 0%, #764ba2 100%);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .card-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #f1f5f9;
+            }
+            
+            .code-block {
+                background: rgba(15, 23, 42, 0.8);
+                border: 1px solid rgba(51, 65, 85, 0.5);
+                border-radius: 8px;
+                padding: 1rem;
+                margin: 0.75rem 0;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 12px;
+                overflow-x: auto;
+                position: relative;
+            }
+            
+            .code-block::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #61DAFB, #764ba2, #f093fb, #f5576c);
+                border-radius: 8px 8px 0 0;
+            }
+            
+            .code-line { 
+                margin: 0.25rem 0;
+                white-space: pre-wrap; /* Preserve whitespace for indentation */
+            }
+            .comment { color: #64748b; font-style: italic; }
+            .keyword { color: #c778dd; }
+            .tag-name { color: #e5c07b; }
+            .attribute { color: #d19a66; }
+            .string { color: #98c379; }
+            .function { color: #61afef; }
+            .operator { color: #f97316; }
+            .punctuation { color: #abb2bf; }
+            .number { color: #f59e0b; }
+            
+            .section-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #f1f5f9;
+                margin: 1rem 0 0.5rem 0;
+                padding-left: 0.75rem;
+                border-left: 3px solid #61DAFB;
+            }
+            
+            .description {
+                color: #94a3b8;
+                font-size: 13px;
+                margin-bottom: 0.75rem;
+                line-height: 1.5;
+            }
+            
+            .hidden { display: none; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>React.js v19</h1>
+                <p>Modern Cheatsheet • by <a href="https://t.me/CodersStudy" style="color: #94a3b8; text-decoration: none;">@CodersStudy</a></p>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for 'Actions', 'use', 'Compiler'...">
+            </div>
+            
+            <div class="grid">
+                <!-- React 19: Actions -->
+                <div class="card" data-keywords="react 19 actions forms form useactionstate useformstatus useoptimistic server actions">
+                    <div class="card-header"><div class="card-icon">🎬</div><h2 class="card-title">React 19: Actions</h2></div>
+                    <div class="description">A new way to handle form submissions and data mutations, simplifying pending states, errors, and optimistic updates. Works seamlessly with async functions.</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="comment">// The 'action' can be an async function</span></div>
+                        <div class="code-line"><span class="punctuation">&lt;</span><span class="tag-name">form</span> <span class="attribute">action</span>=<span class="punctuation">{</span>submitAction<span class="punctuation">}</span><span class="punctuation">&gt;</span></div>
+                        <div class="code-line">  <span class="punctuation">&lt;</span><span class="tag-name">input</span> <span class="attribute">type</span>=<span class="string">"text"</span> <span class="attribute">name</span>=<span class="string">"name"</span> <span class="punctuation">/&gt;</span></div>
+                        <div class="code-line">  <span class="punctuation">&lt;</span><span class="tag-name">button</span> <span class="attribute">type</span>=<span class="string">"submit"</span><span class="punctuation">&gt;</span>Submit<span class="punctuation">&lt;/</span><span class="tag-name">button</span><span class="punctuation">&gt;</span></div>
+                        <div class="code-line"><span class="punctuation">&lt;/</span><span class="tag-name">form</span><span class="punctuation">&gt;</span></div>
+                    </div>
+                    <div class="section-title">Related Hooks</div>
+                    <div class="description">
+                        <b>useActionState:</b> Manages state for actions (pending, data, error).<br>
+                        <b>useFormStatus:</b> Provides status of the parent form submission.<br>
+                        <b>useOptimistic:</b> Apply temporary UI changes before an async action completes.
+                    </div>
+                </div>
+                
+                <!-- React 19: The `use` Hook -->
+                <div class="card" data-keywords="react 19 use hook suspense promise context">
+                    <div class="card-header"><div class="card-icon">✨</div><h2 class="card-title">React 19: The `use` Hook</h2></div>
+                    <div class="description">A versatile hook to read the value of resources like Promises or Context. Can be used inside loops and conditionals, unlike other hooks.</div>
+                    <div class="section-title">Reading Context</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">import</span> <span class="punctuation">{</span> use, createContext <span class="punctuation">}</span> <span class="keyword">from</span> <span class="string">'react'</span><span class="punctuation">;</span></div>
+                        <div class="code-line"><span class="keyword">const</span> <span class="attribute">ThemeContext</span> = <span class="function">createContext</span><span class="punctuation">(</span><span class="string">''</span><span class="punctuation">);</span></div>
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">Heading</span><span class="punctuation">() {</span></div>
+                        <div class="code-line">  <span class="keyword">const</span> theme = <span class="function">use</span><span class="punctuation">(</span>ThemeContext<span class="punctuation">);</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="punctuation">&lt;</span><span class="tag-name">h1</span><span class="punctuation">&gt;</span>Current theme: {theme}<span class="punctuation">&lt;/</span><span class="tag-name">h1</span><span class="punctuation">&gt;;</span></div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                    <div class="section-title">Reading a Promise (with Suspense)</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">Message</span><span class="punctuation">({</span> <span class="attribute">messagePromise</span> <span class="punctuation">}) {</span></div>
+                        <div class="code-line">  <span class="keyword">const</span> message = <span class="function">use</span><span class="punctuation">(</span>messagePromise<span class="punctuation">);</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="punctuation">&lt;</span><span class="tag-name">p</span><span class="punctuation">&gt;</span>Here is the message: {message}<span class="punctuation">&lt;/</span><span class="tag-name">p</span><span class="punctuation">&gt;;</span></div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                </div>
+
+                <!-- React 19: Compiler & Refs -->
+                <div class="card" data-keywords="react 19 compiler memoization performance usememo usecallback ref forwardref">
+                    <div class="card-header"><div class="card-icon">🤖</div><h2 class="card-title">Compiler & `ref` Prop</h2></div>
+                    <div class="section-title">React Compiler (Memoization)</div>
+                    <div class="description">React 19 introduces an optimizing compiler that automatically memoizes components and hooks. This greatly reduces the need for manual optimization with `useMemo`, `useCallback`, and `React.memo`.</div>
+                    <div class="section-title">`ref` as a Prop</div>
+                    <div class="description">You no longer need `forwardRef` to pass a `ref` to a functional component. You can just pass it as a regular prop.</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="comment">// No more forwardRef needed!</span></div>
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">MyInput</span><span class="punctuation">({</span> <span class="attribute">placeholder</span>, <span class="attribute">ref</span> <span class="punctuation">}) {</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="punctuation">&lt;</span><span class="tag-name">input</span> <span class="attribute">placeholder</span>=<span class="punctuation">{</span>placeholder<span class="punctuation">}</span> <span class="attribute">ref</span>=<span class="punctuation">{</span>ref<span class="punctuation">}</span> <span class="punctuation">/&gt;;</span></div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                </div>
+
+                <!-- useState Hook -->
+                <div class="card" data-keywords="usestate hook state management basic complex">
+                    <div class="card-header"><div class="card-icon">🪝</div><h2 class="card-title">useState Hook</h2></div>
+                    <div class="section-title">Basic State</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">const</span> <span class="punctuation">[</span>count, setCount<span class="punctuation">]</span> = <span class="function">useState</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">);</span></div>
+                    </div>
+                    <div class="section-title">Functional Updates</div>
+                    <div class="description">Use a function to set state when the new state depends on the previous one.</div>
+                    <div class="code-block"><div class="code-line"><span class="function">setCount</span><span class="punctuation">(</span><span class="attribute">prevCount</span> <span class="operator">=></span> prevCount + <span class="number">1</span><span class="punctuation">);</span></div></div>
+                </div>
+
+                <!-- useEffect Hook -->
+                <div class="card" data-keywords="useeffect hook side effects lifecycle data fetching">
+                    <div class="card-header"><div class="card-icon">⚡️</div><h2 class="card-title">useEffect Hook</h2></div>
+                    <div class="section-title">Side Effects & Lifecycle</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="comment">// Runs after mount and when dependencies change</span></div>
+                        <div class="code-line"><span class="function">useEffect</span><span class="punctuation">(() => {</span></div>
+                        <div class="code-line">  <span class="comment">// Side effect logic...</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="punctuation">() => {</span> <span class="comment">/* Cleanup */</span> <span class="punctuation">};</span></div>
+                        <div class="code-line"><span class="punctuation">}, [</span><span class="comment">/* dependencies */</span><span class="punctuation">]);</span></div>
+                    </div>
+                     <div class="description">Empty dependency array `[]` means the effect runs only once on mount.</div>
+                </div>
+                
+                <!-- Components & JSX -->
+                <div class="card" data-keywords="components jsx functional class syntax">
+                    <div class="card-header"><div class="card-icon">📖</div><h2 class="card-title">Components & JSX</h2></div>
+                    <div class="section-title">Functional Component</div>
+                     <div class="code-block">
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">Welcome</span><span class="punctuation">({</span> <span class="attribute">name</span> <span class="punctuation">}) {</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="punctuation">&lt;</span><span class="tag-name">h1</span><span class="punctuation">&gt;</span>Hello, {name}<span class="punctuation">&lt;/</span><span class="tag-name">h1</span><span class="punctuation">&gt;;</span></div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                    <div class="section-title">JSX Fragments</div>
+                    <div class="description">Return multiple elements without a wrapper div.</div>
+                    <div class="code-block"><div class="code-line"><span class="punctuation">&lt;&gt;</span>...<span class="punctuation">&lt;/&gt;</span></div></div>
+                </div>
+
+                <!-- Props & Event Handling -->
+                <div class="card" data-keywords="props properties event handling onclick onchange passing data">
+                    <div class="card-header"><div class="card-icon">🎁</div><h2 class="card-title">Props & Event Handling</h2></div>
+                    <div class="section-title">Passing & Receiving Props</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="comment">// Pass a string, number, and function</span></div>
+                        <div class="code-line"><span class="punctuation">&lt;</span><span class="tag-name">MyComponent</span> <span class="attribute">name</span>=<span class="string">"Alice"</span> <span class="attribute">age</span>=<span class="punctuation">{</span><span class="number">30</span><span class="punctuation">}</span> <span class="attribute">onClick</span>=<span class="punctuation">{</span>handleClick<span class="punctuation">}</span> <span class="punctuation">/&gt;</span></div>
+                    </div>
+                    <div class="section-title">Handling Events</div>
+                    <div class="code-block"><div class="code-line"><span class="punctuation">&lt;</span><span class="tag-name">button</span> <span class="attribute">onClick</span>=<span class="punctuation">{e</span> <span class="operator">=></span> <span class="function">console.log</span><span class="punctuation">(</span>e<span class="punctuation">)}&gt;</span>Click Me<span class="punctuation">&lt;/</span><span class="tag-name">button</span><span class="punctuation">&gt;</span></div></div>
+                </div>
+
+                <!-- Conditional Rendering -->
+                <div class="card" data-keywords="conditional rendering if else ternary operator logical and &&">
+                    <div class="card-header"><div class="card-icon">❓</div><h2 class="card-title">Conditional Rendering</h2></div>
+                    <div class="section-title">Ternary Operator</div>
+                    <div class="code-block"><div class="code-line"><span class="punctuation">{</span> <span class="attribute">isLoggedIn</span> <span class="operator">?</span> <span class="punctuation">&lt;</span><span class="tag-name">Profile</span> <span class="punctuation">/&gt;</span> <span class="operator">:</span> <span class="punctuation">&lt;</span><span class="tag-name">Login</span> <span class="punctuation">/&gt;</span> <span class="punctuation">}</span></div></div>
+                    <div class="section-title">Logical && Operator</div>
+                    <div class="code-block"><div class="code-line"><span class="punctuation">{</span> <span class="attribute">isAdmin</span> <span class="operator">&&</span> <span class="punctuation">&lt;</span><span class="tag-name">AdminPanel</span> <span class="punctuation">/&gt;</span> <span class="punctuation">}</span></div></div>
+                </div>
+
+                <!-- Custom Hooks -->
+                <div class="card" data-keywords="custom hooks reusable logic use">
+                    <div class="card-header"><div class="card-icon">🛠️</div><h2 class="card-title">Custom Hooks</h2></div>
+                    <div class="description">Extract component logic into reusable functions. Must start with `use`.</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">function</span> <span class="function">useWindowWidth</span><span class="punctuation">() {</span></div>
+                        <div class="code-line">  <span class="keyword">const</span> <span class="punctuation">[</span>width, setWidth<span class="punctuation">]</span> = <span class="function">useState</span><span class="punctuation">(</span>window.innerWidth<span class="punctuation">);</span></div>
+                        <div class="code-line">  <span class="comment">// ... effect to listen to window resize</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> width;</div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                </div>
+
+                <!-- Context API -->
+                <div class="card" data-keywords="context api global state management provider consumer usecontext">
+                    <div class="card-header"><div class="card-icon">🌐</div><h2 class="card-title">Context API</h2></div>
+                    <div class="description">Pass data through the component tree without prop-drilling.</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">const</span> <span class="attribute">ThemeContext</span> = <span class="function">createContext</span><span class="punctuation">(</span><span class="string">'light'</span><span class="punctuation">);</span></div>
+                        <div class="code-line"><span class="punctuation">&lt;</span><span class="tag-name">ThemeContext.Provider</span> <span class="attribute">value</span>=<span class="string">"dark"</span><span class="punctuation">&gt;</span></div>
+                        <div class="code-line">  ...</div>
+                        <div class="code-line"><span class="punctuation">&lt;/</span><span class="tag-name">ThemeContext.Provider</span><span class="punctuation">&gt;</span></div>
+                        <div class="code-line"><span class="comment">// In React 19, `use(Context)` is preferred</span></div>
+                        <div class="code-line"><span class="keyword">const</span> <span class="attribute">theme</span> = <span class="function">use</span><span class="punctuation">(</span>ThemeContext<span class="punctuation">);</span></div>
+                    </div>
+                </div>
+                
+                <!-- Performance Hooks -->
+                <div class="card" data-keywords="performance optimization react.memo usememo usecallback">
+                    <div class="card-header"><div class="card-icon">🚀</div><h2 class="card-title">Performance Hooks</h2></div>
+                    <div class="description">
+                        These are less necessary with the React 19 Compiler, but useful to know. <br>
+                        <b>useMemo:</b> Memoizes a calculated value. <br>
+                        <b>useCallback:</b> Memoizes a function.
+                    </div>
+                     <div class="code-block">
+                        <div class="code-line"><span class="keyword">const</span> <span class="attribute">memoizedValue</span> = <span class="function">useMemo</span><span class="punctuation">(() => {</span></div>
+                        <div class="code-line">  <span class="keyword">return</span> <span class="function">computeExpensiveValue</span><span class="punctuation">(</span>a, b<span class="punctuation">);</span></div>
+                        <div class="code-line"><span class="punctuation">}, [</span>a, b<span class="punctuation">]);</span></div>
+                    </div>
+                </div>
+
+                <!-- Error Boundaries -->
+                <div class="card" data-keywords="error boundaries handling componentdidcatch getderivedstatefromerror">
+                    <div class="card-header"><div class="card-icon">🛡️</div><h2 class="card-title">Error Boundaries</h2></div>
+                    <div class="description">A class component that catches JS errors in its child component tree. There is no hook equivalent yet.</div>
+                    <div class="code-block">
+                        <div class="code-line"><span class="keyword">class</span> <span class="function">ErrorBoundary</span> <span class="keyword">extends</span> <span class="attribute">React.Component</span> <span class="punctuation">{</span></div>
+                        <div class="code-line">  <span class="keyword">constructor</span><span class="punctuation">(</span><span class="attribute">props</span><span class="punctuation">) { ... }</span></div>
+                        <div class="code-line">  <span class="keyword">static</span> <span class="function">getDerivedStateFromError</span><span class="punctuation">(</span><span class="attribute">error</span><span class="punctuation">) { ... }</span></div>
+                        <div class="code-line">  <span class="function">componentDidCatch</span><span class="punctuation">(</span><span class="attribute">error</span>, <span class="attribute">info</span><span class="punctuation">) { ... }</span></div>
+                        <div class="code-line">  <span class="function">render</span><span class="punctuation">() { ... }</span></div>
+                        <div class="code-line"><span class="punctuation">}</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid rgba(100, 116, 139, 0.2);">
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 0.5rem;">
+                Modern Cheatsheet • by <a style="color:#64748b; text-decoration: none;" href="https://t.me/CodersStudy">@CodersStudy</a>
+            </p>
+            <p style="color: #475569; font-size: 12px;">
+                React js tailored for v19
+            </p>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const searchInput = document.getElementById('searchInput');
+                const cards = document.querySelectorAll('.card');
+
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+                    cards.forEach(card => {
+                        const keywords = card.dataset.keywords.toLowerCase();
+                        if (keywords.includes(searchTerm)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
