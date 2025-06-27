@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Cheatsheet - Dark Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tailwind CSS</h1>
+            <p>Modern Cheatsheet</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for a utility class...">
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✨</div>
+                    <h2 class="card-title">v4.1 New Features</h2>
+                </div>
+                
+                <div class="section-title">Text Shadow</div>
+                <div class="description">
+                    Finally, `text-shadow` utilities are here. Use classes from <span class="tag">text-shadow-2xs</span> to <span class="tag">text-shadow-lg</span> to add shadows to your text.
+                </div>
+
+                <div class="section-title">CSS Masks</div>
+                 <div class="description">
+                    Apply image or gradient masks using the new <span class="tag">mask-*</span> utilities for creative visual effects.
+                </div>
+
+                <div class="section-title">Colored Drop Shadows</div>
+                <div class="description">
+                    You can now apply colored drop shadows using theme colors, like <span class="tag">drop-shadow-indigo-500</span>.
+                </div>
+                 <div class="section-title">New Variants</div>
+                <div class="description">
+                    Includes new variants for different states, like targeting input devices with <span class="tag">pointer-*</span> and <span class="tag">any-pointer-*</span>, or styling for when JavaScript is disabled with <span class="tag">noscript</span>.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🚀</div>
+                    <h2 class="card-title">v4.0 New Features</h2>
+                </div>
+                
+                <div class="section-title">High-Performance Engine</div>
+                <div class="description">
+                    A ground-up rewrite in Rust results in significantly faster build times (up to 10x faster) and a smaller installation size.
+                </div>
+                
+                <div class="section-title">CSS-First Configuration</div>
+                <div class="description">
+                    Configure your theme and add custom utilities directly in your CSS using <span class="tag">@theme</span>, eliminating the need for a `tailwind.config.js` file.
+                </div>
+
+                <div class="section-title">Automatic Content Detection</div>
+                <div class="description">
+                   Tailwind now automatically discovers your template files, so no `content` configuration is needed in most projects.
+                </div>
+
+                <div class="section-title">Modern Web Features</div>
+                <div class="description">
+                    Built-in support for container queries, a vivid P3 color palette, and native CSS variables for all design tokens.
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🧠</div>
+                    <h2 class="card-title">Core Concepts</h2>
+                </div>
+                
+                <div class="section-title">Utility-First</div>
+                <div class="description">
+                    Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without writing any custom CSS.
+                </div>
+                
+                <div class="section-title">Responsive Design</div>
+                <div class="description">
+                    Use responsive utility variants to build adaptive user interfaces. For example, use <span class="tag">md:text-center</span> to apply the <span class="tag">text-center</span> utility at medium screen sizes and above.
+                </div>
+                 <div class="section-title">Hover, Focus, & Other States</div>
+                <div class="description">
+                    Tailwind includes modifiers for different states like hover, focus, active, and more. For example, <span class="tag">hover:bg-blue-700</span>.
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🖼️</div>
+                    <h2 class="card-title">Layout</h2>
+                </div>
+                
+                <div class="section-title">Container</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.container</span> <span class="comment">// max-width for each breakpoint</span></div>
+                </div>
+
+                <div class="section-title">Display</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.block</span>, <span class="function">.inline-block</span>, <span class="function">.inline</span>, <span class="function">.flex</span>, <span class="function">.grid</span>, <span class="function">.hidden</span></div>
+                </div>
+
+                <div class="section-title">Position</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.static</span>, <span class="function">.relative</span>, <span class="function">.absolute</span>, <span class="function">.fixed</span>, <span class="function">.sticky</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🏁</div>
+                    <h2 class="card-title">Flexbox & Grid</h2>
+                </div>
+
+                <div class="section-title">Flex Direction</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.flex-row</span>, <span class="function">.flex-row-reverse</span>, <span class="function">.flex-col</span>, <span class="function">.flex-col-reverse</span></div>
+                </div>
+
+                <div class="section-title">Justify Content</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.justify-start</span>, <span class="function">.justify-end</span>, <span class="function">.justify-center</span>, <span class="function">.justify-between</span>, <span class="function">.justify-around</span></div>
+                </div>
+
+                <div class="section-title">Grid Template Columns</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.grid-cols-1</span>, <span class="function">.grid-cols-2</span>, ..., <span class="function">.grid-cols-12</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📏</div>
+                    <h2 class="card-title">Spacing</h2>
+                </div>
+                <div class="section-title">Padding</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">p-0</span>, <span class="function">p-1</span>, <span class="function">p-2</span>, ..., <span class="function">p-96</span></div>
+                    <div class="code-line"><span class="function">px-4</span> <span class="comment">// Horizontal padding</span></div>
+                    <div class="code-line"><span class="function">py-2</span> <span class="comment">// Vertical padding</span></div>
+                </div>
+                 <div class="section-title">Margin</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">m-0</span>, <span class="function">m-1</span>, <span class="function">m-2</span>, ..., <span class="function">m-96</span></div>
+                    <div class="code-line"><span class="function">mx-auto</span> <span class="comment">// Horizontal margin auto</span></div>
+                    <div class="code-line"><span class="function">-mt-4</span> <span class="comment">// Negative margin</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📐</div>
+                    <h2 class="card-title">Sizing</h2>
+                </div>
+
+                <div class="section-title">Width</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">w-auto</span>, <span class="function">w-full</span>, <span class="function">w-screen</span>, <span class="function">w-1/2</span>, <span class="function">w-64</span></div>
+                </div>
+
+                <div class="section-title">Height</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">h-auto</span>, <span class="function">h-full</span>, <span class="function">h-screen</span>, <span class="function">h-1/2</span>, <span class="function">h-64</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✍️</div>
+                    <h2 class="card-title">Typography</h2>
+                </div>
+
+                <div class="section-title">Font Size</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.text-xs</span>, <span class="function">.text-sm</span>, <span class="function">.text-base</span>, <span class="function">.text-lg</span>, <span class="function">.text-xl</span>, <span class="function">.text-2xl</span></div>
+                </div>
+                 <div class="section-title">Font Weight</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.font-light</span>, <span class="function">.font-normal</span>, <span class="function">.font-medium</span>, <span class="function">.font-bold</span></div>
+                </div>
+                <div class="section-title">Text Color</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.text-gray-500</span>, <span class="function">.text-red-500</span>, <span class="function">.text-blue-500</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🎨</div>
+                    <h2 class="card-title">Backgrounds</h2>
+                </div>
+                <div class="section-title">Background Color</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.bg-gray-200</span>, <span class="function">.bg-blue-500</span>, <span class="function">.bg-transparent</span></div>
+                </div>
+                <div class="section-title">Gradient Colors</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.bg-gradient-to-r</span> <span class="comment">// Right</span></div>
+                    <div class="code-line"><span class="function">.from-purple-400</span> <span class="comment">// Start color</span></div>
+                    <div class="code-line"><span class="function">.to-pink-500</span> <span class="comment">// End color</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🖼️</div>
+                    <h2 class="card-title">Borders</h2>
+                </div>
+                <div class="section-title">Border Width</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.border</span>, <span class="function">.border-2</span>, <span class="function">.border-t-4</span></div>
+                </div>
+
+                <div class="section-title">Border Color</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.border-gray-300</span>, <span class="function">.border-indigo-500</span></div>
+                </div>
+
+                <div class="section-title">Border Radius</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.rounded-none</span>, <span class="function">.rounded</span>, <span class="function">.rounded-full</span></div>
+                </div>
+            </div>
+             
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💫</div>
+                    <h2 class="card-title">Transitions & Animation</h2>
+                </div>
+                <div class="section-title">Transition Property</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.transition-all</span>, <span class="function">.transition-colors</span>, <span class="function">.transition-opacity</span></div>
+                </div>
+
+                <div class="section-title">Transition Duration & Timing</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.duration-300</span>, <span class="function">.duration-500</span>, <span class="function">.ease-in-out</span>, <span class="function">.ease-linear</span></div>
+                </div>
+
+                <div class="section-title">Animation</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.animate-spin</span>, <span class="function">.animate-ping</span>, <span class="function">.animate-pulse</span>, <span class="function">.animate-bounce</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🔄</div>
+                    <h2 class="card-title">Transforms</h2>
+                </div>
+                <div class="section-title">Scale</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.scale-95</span>, <span class="function">.scale-100</span>, <span class="function">.scale-105</span>, <span class="function">.scale-x-50</span></div>
+                </div>
+                <div class="section-title">Rotate & Translate</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.rotate-45</span>, <span class="function">.-rotate-90</span>, <span class="function">.translate-x-12</span>, <span class="function">-translate-y-4</span></div>
+                </div>
+                <div class="section-title">Skew & Origin</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.skew-x-12</span>, <span class="function">.-skew-y-6</span>, <span class="function">.origin-center</span>, <span class="function">.origin-top-right</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🖱️</div>
+                    <h2 class="card-title">Interactivity</h2>
+                </div>
+                <div class="section-title">Cursor</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.cursor-pointer</span>, <span class="function">.cursor-wait</span>, <span class="function">.cursor-not-allowed</span></div>
+                </div>
+                <div class="section-title">Pointer Events</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.pointer-events-none</span> <span class="comment">// Element is ignored</span></div>
+                    <div class="code-line"><span class="function">.pointer-events-auto</span> <span class="comment">// Default behavior</span></div>
+                </div>
+                <div class="section-title">User Select</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.select-none</span>, <span class="function">.select-text</span>, <span class="function">.select-all</span></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📸</div>
+                    <h2 class="card-title">Filters</h2>
+                </div>
+                <div class="section-title">Filter</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.blur-md</span>, <span class="function">.brightness-125</span>, <span class="function">.contrast-150</span>, <span class="function">.grayscale</span></div>
+                </div>
+                <div class="section-title">Backdrop Filter</div>
+                <div class="description">
+                    Apply filters to the area behind an element. Enable with <span class="tag">backdrop-filter</span>.
+                </div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.backdrop-blur-sm</span>, <span class="function">.backdrop-brightness-50</span>, <span class="function">.backdrop-saturate-150</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🎴</div>
+                    <h2 class="card-title">Effects</h2>
+                </div>
+                <div class="section-title">Box Shadow</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.shadow-sm</span>, <span class="function">.shadow-md</span>, <span class="function">.shadow-lg</span>, <span class="function">.shadow-inner</span>, <span class="function">.shadow-none</span></div>
+                </div>
+                <div class="section-title">Opacity</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.opacity-0</span>, <span class="function">.opacity-25</span>, <span class="function">.opacity-50</span>, <span class="function">.opacity-75</span>, <span class="function">.opacity-100</span></div>
+                </div>
+                <div class="section-title">Blend Mode</div>
+                <div class="code-block">
+                    <div class="code-line"><span class="function">.mix-blend-multiply</span>, <span class="function">.bg-blend-screen</span></div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid rgba(100, 116, 139, 0.2);">
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 0.5rem;">
+                Tailwind CSS Cheatsheet
+            </p>
+            <p style="color: #475569; font-size: 12px;">
+                Covers modern Tailwind CSS patterns up to v4.1
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
