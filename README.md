@@ -14,6 +14,7 @@ A curated collection of modern, visually appealing cheatsheets for web developme
 
 ## Available Cheatsheets
 - **JavaScript Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html) | Covers variables, functions, arrays, objects, loops, conditionals, and ES6+ features.
+- **React.js v19 Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/reactjs-v19-cheatsheet/) | Modern Cheatsheet • React js tailored for v19
 - *More cheatsheets coming soon (e.g., HTML, CSS, React, etc.)!*
 
 *For example:* To view the JavaScript cheatsheet, open `javascript-cheatsheet/index.html` in your browser or visit the hosted version at [JavaScript Cheatsheet](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html).
