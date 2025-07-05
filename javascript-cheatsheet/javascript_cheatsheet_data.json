@@ -1,0 +1,860 @@
+{
+  "header": {
+    "h1": "JavaScript",
+    "p": "Modern Cheatsheet • by<a href=\"https://t.me/CodersStudy\"> @CodersStudy </a>"
+  },
+  "cards": [
+    {
+      "card-header": {
+        "card-icon": "📦",
+        "card-title": "Variables & Data Types"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Variable Declarations"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">var</span> name = <span class=\"string\">\"Old way\"</span>; <span class=\"comment\">// Function-scoped</span>",
+            "<span class=\"keyword\">let</span> age = <span class=\"number\">25</span>; <span class=\"comment\">// Block-scoped</span>",
+            "<span class=\"keyword\">const</span> PI = <span class=\"number\">3.14159</span>; <span class=\"comment\">// Immutable</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Primitive Types"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">let</span> str = <span class=\"string\">\"Hello\"</span>; <span class=\"comment\">// String</span>",
+            "<span class=\"keyword\">let</span> num = <span class=\"number\">42</span>; <span class=\"comment\">// Number</span>",
+            "<span class=\"keyword\">let</span> bool = <span class=\"keyword\">true</span>; <span class=\"comment\">// Boolean</span>",
+            "<span class=\"keyword\">let</span> nothing = <span class=\"keyword\">null</span>; <span class=\"comment\">// Null</span>",
+            "<span class=\"keyword\">let</span> undef; <span class=\"comment\">// Undefined</span>"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "ES6+",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "<span class=\"keyword\">let</span> sym = <span class=\"function\">Symbol</span>(<span class=\"string\">'id'</span>);",
+              "<span class=\"keyword\">let</span> big = <span class=\"number\">123n</span>; <span class=\"comment\">// BigInt</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⚡",
+        "card-title": "Operators"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Arithmetic"
+        },
+        {
+          "type": "table",
+          "rows": [
+            {
+              "cell1": "<span class=\"operator\">+</span>",
+              "cell2": "Addition"
+            },
+            {
+              "cell1": "<span class=\"operator\">-</span>",
+              "cell2": "Subtraction"
+            },
+            {
+              "cell1": "<span class=\"operator\">*</span>",
+              "cell2": "Multiplication"
+            },
+            {
+              "cell1": "<span class=\"operator\">/</span>",
+              "cell2": "Division"
+            },
+            {
+              "cell1": "<span class=\"operator\">%</span>",
+              "cell2": "Modulus"
+            },
+            {
+              "cell1": "<span class=\"operator\">**</span>",
+              "cell2": "Exponentiation"
+            }
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Comparison"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"operator\">===</span> <span class=\"comment\">// Strict equal</span>",
+            "<span class=\"operator\">!==</span> <span class=\"comment\">// Strict not equal</span>",
+            "<span class=\"operator\">&lt; &gt; &lt;= &gt;=</span> <span class=\"comment\">// Comparison</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Logical"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"operator\">&amp;&amp;</span> <span class=\"comment\">// AND</span>",
+            "<span class=\"operator\">||</span> <span class=\"comment\">// OR</span>",
+            "<span class=\"operator\">!</span> <span class=\"comment\">// NOT</span>",
+            "<span class=\"operator\">??</span> <span class=\"comment\">// Nullish coalescing</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔄",
+        "card-title": "Control Flow"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Conditionals"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">if</span> (condition) {",
+            "  <span class=\"comment\">// code</span>",
+            "} <span class=\"keyword\">else if</span> (condition2) {",
+            "  <span class=\"comment\">// code</span>",
+            "} <span class=\"keyword\">else</span> {",
+            "  <span class=\"comment\">// code</span>",
+            "}"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Loops"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">for</span> (<span class=\"keyword\">let</span> i = <span class=\"number\">0</span>; i &lt; <span class=\"number\">10</span>; i++) { }",
+            "<span class=\"keyword\">for</span> (<span class=\"keyword\">let</span> key <span class=\"keyword\">in</span> obj) { }",
+            "<span class=\"keyword\">for</span> (<span class=\"keyword\">let</span> val <span class=\"keyword\">of</span> arr) { }",
+            "<span class=\"keyword\">while</span> (condition) { }"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Ternary",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "<span class=\"keyword\">let</span> result = condition ? value1 : value2;"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⚙️",
+        "card-title": "Functions"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Function Types"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Function declaration</span>",
+            "<span class=\"keyword\">function</span> <span class=\"function\">myFunc</span>(param) {",
+            "  <span class=\"keyword\">return</span> param;",
+            "}",
+            "",
+            "<span class=\"comment\">// Arrow function</span>",
+            "<span class=\"keyword\">const</span> <span class=\"function\">myFunc</span> = (param) => param;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Advanced Features"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Default parameters</span>",
+            "<span class=\"keyword\">function</span> <span class=\"function\">greet</span>(name = <span class=\"string\">\"World\"</span>) { }",
+            "",
+            "<span class=\"comment\">// Rest parameters</span>",
+            "<span class=\"keyword\">function</span> <span class=\"function\">sum</span>(...numbers) { }"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📊",
+        "card-title": "Arrays"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Common Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "arr.<span class=\"function\">push</span>(item) <span class=\"comment\">// Add to end</span>",
+            "arr.<span class=\"function\">pop</span>() <span class=\"comment\">// Remove from end</span>",
+            "arr.<span class=\"function\">shift</span>() <span class=\"comment\">// Remove from start</span>",
+            "arr.<span class=\"function\">unshift</span>(item) <span class=\"comment\">// Add to start</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Iteration Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "arr.<span class=\"function\">map</span>(fn) <span class=\"comment\">// Transform</span>",
+            "arr.<span class=\"function\">filter</span>(fn) <span class=\"comment\">// Filter</span>",
+            "arr.<span class=\"function\">reduce</span>(fn, init) <span class=\"comment\">// Reduce</span>",
+            "arr.<span class=\"function\">forEach</span>(fn) <span class=\"comment\">// Execute</span>",
+            "arr.<span class=\"function\">find</span>(fn) <span class=\"comment\">// Find first</span>"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Modern",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "[...<span class=\"keyword\">new</span> <span class=\"function\">Set</span>(arr)] <span class=\"comment\">// Remove duplicates</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🎯",
+        "card-title": "Objects"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Object Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"function\">Object.keys</span>(obj) <span class=\"comment\">// Get keys</span>",
+            "<span class=\"function\">Object.values</span>(obj) <span class=\"comment\">// Get values</span>",
+            "<span class=\"function\">Object.entries</span>(obj) <span class=\"comment\">// Get pairs</span>",
+            "<span class=\"function\">Object.assign</span>(target, src) <span class=\"comment\">// Copy</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Destructuring"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">const</span> {name, age} = person;",
+            "<span class=\"keyword\">const</span> {name: personName} = person;",
+            "<span class=\"keyword\">const</span> [first, second] = array;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📝",
+        "card-title": "Strings"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "String Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "str.<span class=\"function\">length</span> <span class=\"comment\">// Length</span>",
+            "str.<span class=\"function\">charAt</span>(index) <span class=\"comment\">// Character at</span>",
+            "str.<span class=\"function\">indexOf</span>(sub) <span class=\"comment\">// Find substring</span>",
+            "str.<span class=\"function\">slice</span>(start, end) <span class=\"comment\">// Extract</span>",
+            "str.<span class=\"function\">replace</span>(old, new) <span class=\"comment\">// Replace</span>"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Template Literals",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "<span class=\"string\">`Hello ${name}, age ${age}`</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🌐",
+        "card-title": "DOM Manipulation"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Selecting Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "document.<span class=\"function\">getElementById</span>(<span class=\"string\">'id'</span>)",
+            "document.<span class=\"function\">querySelector</span>(<span class=\"string\">'.class'</span>)",
+            "document.<span class=\"function\">querySelectorAll</span>(<span class=\"string\">'.class'</span>)"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Manipulation"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "element.innerHTML = <span class=\"string\">'content'</span>",
+            "element.textContent = <span class=\"string\">'text'</span>",
+            "element.classList.<span class=\"function\">add</span>(<span class=\"string\">'class'</span>)",
+            "element.style.property = <span class=\"string\">'value'</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⚡",
+        "card-title": "Events"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Event Handling"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "element.<span class=\"function\">addEventListener</span>(<span class=\"string\">'click'</span>, fn)",
+            "element.<span class=\"function\">removeEventListener</span>(<span class=\"string\">'click'</span>, fn)"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Common Events"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"string\">'click'</span>, <span class=\"string\">'mouseover'</span>, <span class=\"string\">'mouseout'</span>",
+            "<span class=\"string\">'keydown'</span>, <span class=\"string\">'keyup'</span>, <span class=\"string\">'keypress'</span>",
+            "<span class=\"string\">'load'</span>, <span class=\"string\">'resize'</span>, <span class=\"string\">'scroll'</span>",
+            "<span class=\"string\">'submit'</span>, <span class=\"string\">'change'</span>, <span class=\"string\">'input'</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🖥️",
+        "card-title": "Console"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "console.<span class=\"function\">log</span>(<span class=\"string\">'Message'</span>) <span class=\"comment\">// Standard output</span>",
+            "console.<span class=\"function\">info</span>(<span class=\"string\">'Info'</span>) <span class=\"comment\">// Informational</span>",
+            "console.<span class=\"function\">warn</span>(<span class=\"string\">'Warning'</span>) <span class=\"comment\">// Warning</span>",
+            "console.<span class=\"function\">error</span>(<span class=\"string\">'Error'</span>) <span class=\"comment\">// Error</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Debugging"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "console.<span class=\"function\">table</span>(data) <span class=\"comment\">// Display tabular data</span>",
+            "console.<span class=\"function\">dir</span>(obj) <span class=\"comment\">// Display object properties</span>",
+            "console.<span class=\"function\">time</span>(<span class=\"string\">'label'</span>) <span class=\"comment\">// Start timer</span>",
+            "console.<span class=\"function\">timeEnd</span>(<span class=\"string\">'label'</span>) <span class=\"comment\">// End timer</span>",
+            "console.<span class=\"function\">trace</span>() <span class=\"comment\">// Stack trace</span>"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Formatting",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "console.<span class=\"function\">log</span>(<span class=\"string\">'%cStyled'</span>, <span class=\"string\">'color: blue;'</span>) <span class=\"comment\">// CSS styling</span>",
+              "console.<span class=\"function\">group</span>(<span class=\"string\">'Group'</span>) <span class=\"comment\">// Start grouped output</span>",
+              "console.<span class=\"function\">groupEnd</span>() <span class=\"comment\">// End grouped output</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⏳",
+        "card-title": "Async Programming"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Promises"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">const</span> promise = <span class=\"keyword\">new</span> <span class=\"function\">Promise</span>((resolve, reject) => {",
+            "  <span class=\"keyword\">if</span> (success) <span class=\"function\">resolve</span>(result);",
+            "  <span class=\"keyword\">else</span> <span class=\"function\">reject</span>(error);",
+            "});"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Async/Await"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">async function</span> <span class=\"function\">fetchData</span>() {",
+            "  <span class=\"keyword\">try</span> {",
+            "    <span class=\"keyword\">const</span> data = <span class=\"keyword\">await</span> <span class=\"function\">fetch</span>(url);",
+            "    <span class=\"keyword\">return</span> data;",
+            "  } <span class=\"keyword\">catch</span> (error) {",
+            "    console.<span class=\"function\">error</span>(error);",
+            "  }",
+            "}"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🚀",
+        "card-title": "ES6+ Features"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Classes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">class</span> <span class=\"function\">Person</span> {",
+            "  <span class=\"function\">constructor</span>(name, age) {",
+            "    <span class=\"keyword\">this</span>.name = name;",
+            "    <span class=\"keyword\">this</span>.age = age;",
+            "  }",
+            "  <span class=\"function\">greet</span>() {",
+            "    <span class=\"keyword\">return</span> <span class=\"string\">`Hello ${this.name}`</span>;",
+            "  }",
+            "}"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Modules"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">export</span> <span class=\"keyword\">const</span> variable = <span class=\"string\">'value'</span>;",
+            "<span class=\"keyword\">export default</span> <span class=\"keyword\">class</span> MyClass { }",
+            "<span class=\"keyword\">import</span> { variable } <span class=\"keyword\">from</span> <span class=\"string\">'./module.js'</span>;"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Modern Operators",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "obj?.prop?.nested <span class=\"comment\">// Optional chaining</span>",
+              "value ?? <span class=\"string\">'default'</span> <span class=\"comment\">// Nullish coalescing</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "💡",
+        "card-title": "Quick Tips"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Common Patterns"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Check if variable exists</span>",
+            "<span class=\"keyword\">if</span> (<span class=\"keyword\">typeof</span> variable !== <span class=\"string\">'undefined'</span>) { }",
+            "",
+            "<span class=\"comment\">// Convert to number</span>",
+            "<span class=\"function\">Number</span>(str), <span class=\"function\">parseInt</span>(str), +str",
+            "",
+            "<span class=\"comment\">// Clone array/object</span>",
+            "[...arr], {...obj}"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Performance Tips"
+        },
+        {
+          "type": "description",
+          "content": "• Use <code>const</code> and <code>let</code> instead of <code>var</code><br>• Use strict equality <code>===</code><br>• Cache DOM queries<br>• Use event delegation<br>• Prefer <code>for</code> loops for performance-critical code"
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🛡️",
+        "card-title": "Error Handling"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Try-Catch"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">try</span> {",
+            "  <span class=\"comment\">// Risky code</span>",
+            "  <span class=\"keyword\">let</span> result = <span class=\"function\">riskyOperation</span>();",
+            "} <span class=\"keyword\">catch</span> (error) {",
+            "  console.<span class=\"function\">error</span>(<span class=\"string\">'Error:'</span>, error.message);",
+            "} <span class=\"keyword\">finally</span> {",
+            "  <span class=\"comment\">// Always executed</span>",
+            "  <span class=\"function\">cleanup</span>();",
+            "}"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Custom Errors"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">throw new</span> <span class=\"function\">Error</span>(<span class=\"string\">'Something went wrong'</span>);",
+            "<span class=\"keyword\">throw new</span> <span class=\"function\">TypeError</span>(<span class=\"string\">'Expected number'</span>);"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🗃️",
+        "card-title": "Data Structures"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Set"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">const</span> set = <span class=\"keyword\">new</span> <span class=\"function\">Set</span>([<span class=\"number\">1</span>, <span class=\"number\">2</span>, <span class=\"number\">3</span>]);",
+            "set.<span class=\"function\">add</span>(<span class=\"number\">4</span>); <span class=\"comment\">// Add value</span>",
+            "set.<span class=\"function\">has</span>(<span class=\"number\">1</span>); <span class=\"comment\">// Check exists</span>",
+            "set.<span class=\"function\">delete</span>(<span class=\"number\">2</span>); <span class=\"comment\">// Remove value</span>",
+            "set.<span class=\"function\">clear</span>(); <span class=\"comment\">// Remove all</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Map"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">const</span> map = <span class=\"keyword\">new</span> <span class=\"function\">Map</span>();",
+            "map.<span class=\"function\">set</span>(<span class=\"string\">'key'</span>, <span class=\"string\">'value'</span>); <span class=\"comment\">// Set key-value</span>",
+            "map.<span class=\"function\">get</span>(<span class=\"string\">'key'</span>); <span class=\"comment\">// Get value</span>",
+            "map.<span class=\"function\">has</span>(<span class=\"string\">'key'</span>); <span class=\"comment\">// Check key exists</span>",
+            "map.<span class=\"function\">delete</span>(<span class=\"string\">'key'</span>); <span class=\"comment\">// Remove key</span>"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "WeakMap & WeakSet",
+          "content": {
+            "type": "description",
+            "text": "Similar to Map/Set but with weak references - objects can be garbage collected"
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔍",
+        "card-title": "Regular Expressions"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Creating RegExp"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">const</span> regex1 = <span class=\"string\">/pattern/flags</span>;",
+            "<span class=\"keyword\">const</span> regex2 = <span class=\"keyword\">new</span> <span class=\"function\">RegExp</span>(<span class=\"string\">'pattern'</span>, <span class=\"string\">'flags'</span>);"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Common Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "regex.<span class=\"function\">test</span>(str) <span class=\"comment\">// Returns boolean</span>",
+            "str.<span class=\"function\">match</span>(regex) <span class=\"comment\">// Returns matches</span>",
+            "str.<span class=\"function\">replace</span>(regex, replacement)",
+            "str.<span class=\"function\">search</span>(regex) <span class=\"comment\">// Returns index</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Common Patterns"
+        },
+        {
+          "type": "table",
+          "rows": [
+            {
+              "cell1": "<span class=\"string\">/\\d+/</span>",
+              "cell2": "One or more digits"
+            },
+            {
+              "cell1": "<span class=\"string\">/\\w+/</span>",
+              "cell2": "Word characters"
+            },
+            {
+              "cell1": "<span class=\"string\">/\\s+/</span>",
+              "cell2": "Whitespace"
+            },
+            {
+              "cell1": "<span class=\"string\">/^.+$/</span>",
+              "cell2": "Start to end"
+            },
+            {
+              "cell1": "<span class=\"string\">/[a-z]/i</span>",
+              "cell2": "Case insensitive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📋",
+        "card-title": "JSON"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "JSON Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Object to JSON string</span>",
+            "<span class=\"keyword\">const</span> json = JSON.<span class=\"function\">stringify</span>(obj);",
+            "",
+            "<span class=\"comment\">// JSON string to object</span>",
+            "<span class=\"keyword\">const</span> obj = JSON.<span class=\"function\">parse</span>(json);"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "With Error Handling"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">try</span> {",
+            "  <span class=\"keyword\">const</span> data = JSON.<span class=\"function\">parse</span>(jsonString);",
+            "} <span class=\"keyword\">catch</span> (error) {",
+            "  console.<span class=\"function\">error</span>(<span class=\"string\">'Invalid JSON'</span>, error);",
+            "}"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Pretty Print",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "JSON.<span class=\"function\">stringify</span>(obj, <span class=\"keyword\">null</span>, <span class=\"number\">2</span>) <span class=\"comment\">// Indented</span>"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔢",
+        "card-title": "Math & Numbers"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Math Object"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "Math.<span class=\"function\">random</span>() <span class=\"comment\">// 0 to 1</span>",
+            "Math.<span class=\"function\">floor</span>(<span class=\"number\">4.7</span>) <span class=\"comment\">// 4</span>",
+            "Math.<span class=\"function\">ceil</span>(<span class=\"number\">4.1</span>) <span class=\"comment\">// 5</span>",
+            "Math.<span class=\"function\">round</span>(<span class=\"number\">4.5</span>) <span class=\"comment\">// 5</span>",
+            "Math.<span class=\"function\">max</span>(<span class=\"number\">1</span>, <span class=\"number\">2</span>, <span class=\"number\">3</span>) <span class=\"comment\">// 3</span>",
+            "Math.<span class=\"function\">min</span>(<span class=\"number\">1</span>, <span class=\"number\">2</span>, <span class=\"number\">3</span>) <span class=\"comment\">// 1</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Number Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "Number.<span class=\"function\">isInteger</span>(<span class=\"number\">42</span>) <span class=\"comment\">// true</span>",
+            "Number.<span class=\"function\">isNaN</span>(NaN) <span class=\"comment\">// true</span>",
+            "Number.<span class=\"function\">parseFloat</span>(<span class=\"string\">'3.14'</span>) <span class=\"comment\">// 3.14</span>",
+            "(<span class=\"number\">42</span>).<span class=\"function\">toString</span>(<span class=\"number\">16</span>) <span class=\"comment\">// '2a' (hex)</span>",
+            "(<span class=\"number\">3.14159</span>).<span class=\"function\">toFixed</span>(<span class=\"number\">2</span>) <span class=\"comment\">// '3.14'</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📅",
+        "card-title": "Date & Time"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Creating Dates"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">new</span> <span class=\"function\">Date</span>() <span class=\"comment\">// Current date</span>",
+            "<span class=\"keyword\">new</span> <span class=\"function\">Date</span>(<span class=\"string\">'2023-12-25'</span>)",
+            "<span class=\"keyword\">new</span> <span class=\"function\">Date</span>(<span class=\"number\">2023</span>, <span class=\"number\">11</span>, <span class=\"number\">25</span>) <span class=\"comment\">// Month is 0-based</span>",
+            "Date.<span class=\"function\">now</span>() <span class=\"comment\">// Timestamp</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Date Methods"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "date.<span class=\"function\">getFullYear</span>() <span class=\"comment\">// 2023</span>",
+            "date.<span class=\"function\">getMonth</span>() <span class=\"comment\">// 0-11</span>",
+            "date.<span class=\"function\">getDate</span>() <span class=\"comment\">// 1-31</span>",
+            "date.<span class=\"function\">getHours</span>() <span class=\"comment\">// 0-23</span>",
+            "date.<span class=\"function\">toISOString</span>() <span class=\"comment\">// ISO format</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🧠",
+        "card-title": "Advanced Concepts"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Closures"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">function</span> <span class=\"function\">outer</span>(x) {",
+            "  <span class=\"keyword\">return function</span> <span class=\"function\">inner</span>(y) {",
+            "    <span class=\"keyword\">return</span> x + y; <span class=\"comment\">// Access outer scope</span>",
+            "  };",
+            "}",
+            "<span class=\"keyword\">const</span> addFive = <span class=\"function\">outer</span>(<span class=\"number\">5</span>);"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Prototypes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">function</span> <span class=\"function\">Person</span>(name) {",
+            "  <span class=\"keyword\">this</span>.name = name;",
+            "}",
+            "Person.prototype.<span class=\"function\">greet</span> = <span class=\"keyword\">function</span>() {",
+            "  <span class=\"keyword\">return</span> <span class=\"string\">`Hello, I'm ${this.name}`</span>;",
+            "};"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Generator Functions"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"keyword\">function*</span> <span class=\"function\">generator</span>() {",
+            "  <span class=\"keyword\">yield</span> <span class=\"number\">1</span>;",
+            "  <span class=\"keyword\">yield</span> <span class=\"number\">2</span>;",
+            "  <span class=\"keyword\">yield</span> <span class=\"number\">3</span>;",
+            "}",
+            "<span class=\"keyword\">const</span> gen = <span class=\"function\">generator</span>();",
+            "gen.<span class=\"function\">next</span>().value; <span class=\"comment\">// 1</span>"
+          ]
+        }
+      ]
+    }
+  ]
+}
