@@ -4,50 +4,86 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
-// Function to restore original HTML from data-original-html attribute
-function restoreOriginalHtml(element) {
-    if (element.dataset.originalHtml !== undefined) {
-        element.innerHTML = element.dataset.originalHtml;
-    }
-    // Recursively restore for children
-    Array.from(element.children).forEach(child => {
-        restoreOriginalHtml(child);
-    });
-}
-
 function clearAllHighlightsAndRestore() {
     document.querySelectorAll('.card').forEach(card => {
         Array.from(card.querySelectorAll('[data-original-html]')).forEach(el => {
-            el.innerHTML = el.dataset.originalHtml;
+            if (el.dataset.originalHtml !== undefined) {
+                el.innerHTML = el.dataset.originalHtml;
+            }
         });
     });
 }
 
 function highlightText(element, filter) {
     const highlightToggle = document.getElementById('highlightToggle');
-    if (!highlightToggle.checked || !filter) { // Only highlight if toggle is ON and filter exists
+    if (!highlightToggle.checked || !filter) {
         return;
     }
 
     const escapedFilter = escapeRegExp(filter);
-    const regex = new RegExp(`(${escapedFilter})`, 'gi'); // Case-insensitive, global search
+    const regex = new RegExp(`(${escapedFilter})`, 'gi');
 
     element.querySelectorAll('.card-title, .section-title, .description, .code-line, .table td').forEach(textContainer => {
-        // Ensure original HTML is stored only once
+        // Step 1: Ensure we have the ORIGINAL HTML stored.
+        // This is crucial for subsequent searches/toggles to work correctly.
         if (textContainer.dataset.originalHtml === undefined) {
             textContainer.dataset.originalHtml = textContainer.innerHTML;
         }
 
-        let originalContent = textContainer.dataset.originalHtml;
+        // Step 2: Restore to original before applying new highlights.
+        // This clears previous highlights from *this* specific container.
+        textContainer.innerHTML = textContainer.dataset.originalHtml;
 
-        // Only highlight if the filter matches in the original content
-        if (originalContent.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
-            const highlightedContent = originalContent.replace(regex, '<span class="highlight-text">$&</span>');
-            textContainer.innerHTML = highlightedContent;
-        } else {
-            // If no match in original content, ensure original content is restored (no highlights)
-            textContainer.innerHTML = originalContent;
+        // Step 3: Now, iterate through text nodes to apply highlights safely.
+        const walker = document.createTreeWalker(
+            textContainer,
+            NodeFilter.SHOW_TEXT,
+            null, // No custom filter
+            false // Not expandEntityReferences
+        );
+
+        let node;
+        const textNodesToProcess = [];
+        while ((node = walker.nextNode())) {
+            // Ensure we are not inside a previously created highlight span
+            // This check is important if you process elements multiple times
+            if (node.parentNode.classList && node.parentNode.classList.contains('highlight-text')) {
+                continue;
+            }
+            textNodesToProcess.push(node);
         }
+
+        // Process collected text nodes in reverse order to avoid issues with node replacement
+        // (replacing a node changes the DOM structure, which can affect nextNode() behavior)
+        textNodesToProcess.reverse().forEach(textNode => {
+            const originalText = textNode.nodeValue;
+            if (originalText.toUpperCase().includes(filter.toUpperCase())) {
+                const fragment = document.createDocumentFragment();
+                let lastIndex = 0;
+                let match;
+
+                while ((match = regex.exec(originalText)) !== null) {
+                    // Add text before the match
+                    if (match.index > lastIndex) {
+                        fragment.appendChild(document.createTextNode(originalText.substring(lastIndex, match.index)));
+                    }
+                    // Add the highlighted span
+                    const span = document.createElement('span');
+                    span.classList.add('highlight-text');
+                    span.textContent = match[0]; // Use textContent to avoid HTML injection
+                    fragment.appendChild(span);
+                    lastIndex = regex.lastIndex;
+                }
+
+                // Add any remaining text after the last match
+                if (lastIndex < originalText.length) {
+                    fragment.appendChild(document.createTextNode(originalText.substring(lastIndex)));
+                }
+
+                // Replace the original text node with the fragment
+                textNode.parentNode.replaceChild(fragment, textNode);
+            }
+        });
     });
 }
 
@@ -88,7 +124,7 @@ function renderCards(data) {
                 block.lines.forEach(line => {
                     const codeLine = document.createElement('div');
                     codeLine.classList.add('code-line');
-                    codeLine.innerHTML = line;
+                    codeLine.innerHTML = line; // line might contain spans for syntax highlighting
                     codeBlock.appendChild(codeLine);
                 });
                 cardElement.appendChild(codeBlock);
@@ -125,7 +161,7 @@ function renderCards(data) {
                 block.rows.forEach(row => {
                     const tr = document.createElement('tr');
                     const td1 = document.createElement('td');
-                    td1.innerHTML = row.cell1; // Use innerHTML for table cells
+                    td1.innerHTML = row.cell1; // Use innerHTML for table cells, can contain spans
                     const td2 = document.createElement('td');
                     td2.innerHTML = row.cell2;
                     tr.appendChild(td1);
@@ -147,6 +183,8 @@ function renderCards(data) {
 
 // Main DOMContentLoaded logic
 document.addEventListener('DOMContentLoaded', () => {
+    const containerElement = document.querySelector('.container'); // Get container element
+
     fetch('javascript_cheatsheet_data.json')
         .then(response => response.json())
         .then(data => {
@@ -155,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('main-title').innerText = cheatsheetData.header.h1;
             document.getElementById('sub-title').innerHTML = cheatsheetData.header.p;
             renderCards(cheatsheetData); // Initial render of all cards
+            containerElement.style.opacity = '1'; // Fade in the container after content is rendered
         })
         .catch(error => console.error('Error loading JSON data:', error));
 
@@ -179,13 +218,17 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < cards.length; i++) {
             let card = cards[i];
             // Get the text content for filtering purposes from the original HTML
+            // Create a temporary element to safely get text content without interference from existing (hidden) highlight spans
             const tempDivForFiltering = document.createElement('div');
-            // Create a deep clone to get text content without interference from current highlights
-            tempDivForFiltering.innerHTML = card.outerHTML;
-            // To accurately get textContent for filtering, ensure no highlight spans are in it
-            tempDivForFiltering.querySelectorAll('.highlight-text').forEach(span => {
+            // Create a clone of the card's original HTML
+            tempDivForFiltering.innerHTML = card.innerHTML; // Use card.innerHTML directly because originalHtml is restored by clearAllHighlightsAndRestore
+
+            // To accurately get textContent for filtering, remove any highlight spans from this temporary copy
+            // (This is redundant if clearAllHighlightsAndRestore works perfectly but adds robustness)
+            Array.from(tempDivForFiltering.querySelectorAll('.highlight-text')).forEach(span => {
                 span.outerHTML = span.textContent;
             });
+
             let content = tempDivForFiltering.textContent || tempDivForFiltering.innerText;
 
 
