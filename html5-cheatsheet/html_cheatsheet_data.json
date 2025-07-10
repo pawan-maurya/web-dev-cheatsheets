@@ -539,7 +539,7 @@
           "type": "code-block",
           "lines": [
             "&lt;<span class=\"tag-name\">svg</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"100\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"100\"</span>&gt;",
-            "  &lt;<span class=\"tag-name\">circle</span> <span class=\"attribute\">cx</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">cy</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">r</span>=<span class=\"attribute-value\">\"40\"</span> <span class=\"attribute\">stroke</span>=<span class=\"attribute-value\">\"green\"</span> <span class=\"attribute\">stroke-width</span>=<span class=\"attribute\">\"4\"</span> <span class=\"attribute\">fill</span>=<span class=\"attribute-value\">\"yellow\"</span> /&gt;",
+            "  &lt;<span class=\"tag-name\">circle</span> <span class=\"attribute\">cx</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">cy</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">r</span>=<span class=\"attribute-value\">\"40\"</span> <span class=\"attribute\">stroke</span>=<span class=\"attribute-value\">\"green\"</span> <span class=\"attribute\">stroke-width</span>=<span class=\"attribute-value\">\"4\"</span> <span class=\"attribute\">fill</span>=<span class=\"attribute-value\">\"yellow\"</span> /&gt;",
             "&lt;/<span class=\"tag-name\">svg</span>&gt;",
             "&lt;<span class=\"tag-name\">svg</span> <span class=\"attribute\">viewBox</span>=<span class=\"attribute-value\">\"0 0 24 24\"</span> <span class=\"attribute\">fill</span>=<span class=\"attribute-value\">\"currentColor\"</span>&gt;",
             "  &lt;<span class=\"tag-name\">path</span> <span class=\"attribute\">d</span>=<span class=\"attribute-value\">\"M12 2L2 12h10l-10 10h20L12 2z\"</span> /&gt;",
@@ -601,7 +601,7 @@
             "&lt;<span class=\"tag-name\">template</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"my-template\"</span>&gt;",
             "  &lt;<span class=\"tag-name\">h2</span>&gt;Template Content&lt;/<span class=\"tag-name\">h2</span>&gt;",
             "  &lt;<span class=\"tag-name\">slot</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"header\"</span>&gt;Default Header&lt;/<span class=\"tag-name\">slot</span>&gt;",
-            "  &lt;<span class=\"tag-name\">p</span>&gt;Some text.&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span>&gt;Some text.&lt;/p&gt;",
             "&lt;/<span class=\"tag-name\">template</span>&gt;",
             "",
             "&lt;<span class=\"tag-name\">my-card</span>&gt;",
@@ -629,6 +629,211 @@
             "&lt;<span class=\"tag-name\">big</span>&gt;Use CSS font-size&lt;/<span class=\"tag-name\">big</span>&gt;",
             "&lt;<span class=\"tag-name\">strike</span>&gt;Use &lt;<span class=\"tag-name\">del</span>&gt; or CSS text-decoration&lt;/<span class=\"tag-name\">strike</span>&gt;",
             "&lt;<span class=\"tag-name\">frame</span>&gt;, &lt;<span class=\"tag-name\">frameset</span>&gt;, &lt;<span class=\"tag-name\">noframes</span>&gt; (Use &lt;<span class=\"tag-name\">iframe</span>&gt; or CSS layout)"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔍",
+        "card-title": "SEO & Meta Tags"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic Meta Tags"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"description\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"A concise summary of the page content.\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"keywords\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"html, css, javascript, web development\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"author\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"Your Name\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"robots\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"index, follow\"</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Open Graph (Social Sharing)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">property</span>=<span class=\"attribute-value\">\"og:title\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"Your Page Title\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">property</span>=<span class=\"attribute-value\">\"og:description\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"A short description for social media.\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">property</span>=<span class=\"attribute-value\">\"og:image\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"https://example.com/image.jpg\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">property</span>=<span class=\"attribute-value\">\"og:url\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"https://example.com/your-page\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">property</span>=<span class=\"attribute-value\">\"og:type\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"website\"</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Twitter Cards"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"twitter:card\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"summary_large_image\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"twitter:site\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"@yourtwitterhandle\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"twitter:title\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"Your Page Title\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"twitter:description\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"A short description for Twitter.\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"twitter:image\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"https://example.com/image.jpg\"</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "✨",
+        "card-title": "Favicons & App Icons"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Favicon"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">link</span> <span class=\"attribute\">rel</span>=<span class=\"attribute-value\">\"icon\"</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"/favicon.ico\"</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"image/x-icon\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">link</span> <span class=\"attribute\">rel</span>=<span class=\"attribute-value\">\"icon\"</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"/favicon-32x32.png\"</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"image/png\"</span> <span class=\"attribute\">sizes</span>=<span class=\"attribute-value\">\"32x32\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">link</span> <span class=\"attribute\">rel</span>=<span class=\"attribute-value\">\"apple-touch-icon\"</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"/apple-touch-icon.png\"</span>&gt; <span class=\"comment\">// For Apple devices</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Web App Manifest (PWA)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">link</span> <span class=\"attribute\">rel</span>=<span class=\"attribute-value\">\"manifest\"</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"/manifest.json\"</span>&gt;",
+            "<span class=\"comment\">// manifest.json example:</span>",
+            "<span class=\"string\">`{</span>",
+            "<span class=\"string\">  \"name\": \"My Awesome App\",</span>",
+            "<span class=\"string\">  \"short_name\": \"App\",</span>",
+            "<span class=\"string\">  \"icons\": [</span>",
+            "<span class=\"string\">    { \"src\": \"/icon-192.png\", \"sizes\": \"192x192\", \"type\": \"image/png\" },</span>",
+            "<span class=\"string\">    { \"src\": \"/icon-512.png\", \"sizes\": \"512x512\", \"type\": \"image/png\" }</span>",
+            "<span class=\"string\">  ],</span>",
+            "<span class=\"string\">  \"start_url\": \"/\",</span>",
+            "<span class=\"string\">  \"display\": \"standalone\",</span>",
+            "<span class=\"string\">  \"background_color\": \"#3367D6\",</span>",
+            "<span class=\"string\">  \"theme_color\": \"#3367D6\"</span>",
+            "<span class=\"string\">}`</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "💾",
+        "card-title": "Web Storage & Offline"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Local Storage (Client-side)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Storing data</span>",
+            "localStorage.<span class=\"function\">setItem</span>(<span class=\"string\">'username'</span>, <span class=\"string\">'JohnDoe'</span>);",
+            "<span class=\"comment\">// Retrieving data</span>",
+            "<span class=\"keyword\">const</span> user = localStorage.<span class=\"function\">getItem</span>(<span class=\"string\">'username'</span>);",
+            "<span class=\"comment\">// Removing data</span>",
+            "localStorage.<span class=\"function\">removeItem</span>(<span class=\"string\">'username'</span>);",
+            "<span class=\"comment\">// Clearing all data</span>",
+            "localStorage.<span class=\"function\">clear</span>();"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Session Storage (Client-side, per session)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\">// Works identically to localStorage, but data is cleared when session ends</span>",
+            "sessionStorage.<span class=\"function\">setItem</span>(<span class=\"string\">'tempData'</span>, <span class=\"string\">'someValue'</span>);"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Note",
+          "content": {
+            "type": "description",
+            "content": "Web Storage is primarily a JavaScript API, but its purpose is to store data for HTML pages. Data is stored as strings."
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "↔️",
+        "card-title": "Drag & Drop API (HTML Attributes)"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Draggable Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">draggable</span>=<span class=\"attribute-value\">\"true\"</span> <span class=\"attribute\">ondragstart</span>=<span class=\"attribute-value\">\"event.dataTransfer.setData('text/plain', this.id)\"</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"drag1\"</span>&gt;Drag Me&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Drop Zones"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">ondragover</span>=<span class=\"attribute-value\">\"event.preventDefault()\"</span> <span class=\"attribute\">ondrop</span>=<span class=\"attribute-value\">\"event.preventDefault(); var data = event.dataTransfer.getData('text'); event.target.appendChild(document.getElementById(data));\"</span> <span class=\"attribute\">style</span>=<span class=\"attribute-value\">\"width:100px;height:100px;border:1px solid black;\"</span>&gt;Drop Here&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📈",
+        "card-title": "Structured Data (Schema.org)"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic ItemScope & ItemType"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">itemscope</span> <span class=\"attribute\">itemtype</span>=<span class=\"attribute-value\">\"http://schema.org/Person\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">span</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"name\"</span>&gt;John Doe&lt;/<span class=\"tag-name\">span</span>&gt;",
+            "  &lt;<span class=\"tag-name\">img</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"image\"</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"john-doe.jpg\"</span> <span class=\"attribute\">alt</span>=<span class=\"attribute-value\">\"John Doe\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span>&gt;Title: &lt;<span class=\"tag-name\">span</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"jobTitle\"</span>&gt;Software Engineer&lt;/<span class=\"tag-name\">span</span>&gt;&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Review Example"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">itemscope</span> <span class=\"attribute\">itemtype</span>=<span class=\"attribute-value\">\"http://schema.org/Review\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"itemReviewed\"</span> <span class=\"attribute\">itemscope</span> <span class=\"attribute\">itemtype</span>=<span class=\"attribute-value\">\"http://schema.org/Book\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"name\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"The Great Book\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"reviewRating\"</span> <span class=\"attribute\">itemscope</span> <span class=\"attribute\">itemtype</span>=<span class=\"attribute-value\">\"http://schema.org/Rating\"</span>&gt;",
+            "    &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"ratingValue\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"5\"</span>&gt;5 stars&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span>&gt;Reviewed by &lt;<span class=\"tag-name\">span</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"author\"</span> <span class=\"attribute\">itemscope</span> <span class=\"attribute\">itemtype</span>=<span class=\"attribute-value\">\"http://schema.org/Person\"</span>&gt;",
+            "    &lt;<span class=\"tag-name\">span</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"name\"</span>&gt;Jane Doe&lt;/<span class=\"tag-name\">span</span>&gt;&lt;/<span class=\"tag-name\">span</span>&gt; on ",
+            "    &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"datePublished\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"2023-01-15\"</span>&gt;Jan 15, 2023&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span> <span class=\"attribute\">itemprop</span>=<span class=\"attribute-value\">\"reviewBody\"</span>&gt;This book was absolutely fantastic!&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "&lt;/<span class=\"tag-name\">div</span>&gt;"
           ]
         }
       ]
