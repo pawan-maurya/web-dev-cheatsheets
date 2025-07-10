@@ -1,0 +1,637 @@
+{
+  "header": {
+    "h1": "HTML5",
+    "p": "Modern Cheatsheet • by<a href=\"https://t.me/CodersStudy\"> @CodersStudy </a>"
+  },
+  "cards": [
+    {
+      "card-header": {
+        "card-icon": "📄",
+        "card-title": "Document Structure"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic Document"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">!DOCTYPE</span> <span class=\"attribute\">html</span>&gt;",
+            "&lt;<span class=\"tag-name\">html</span> <span class=\"attribute\">lang</span>=<span class=\"attribute-value\">\"en\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">head</span>&gt;",
+            "  &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">charset</span>=<span class=\"attribute-value\">\"UTF-8\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"viewport\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"width=device-width, initial-scale=1.0\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">title</span>&gt;Document Title&lt;/<span class=\"tag-name\">title</span>&gt;",
+            "&lt;/<span class=\"tag-name\">head</span>&gt;",
+            "&lt;<span class=\"tag-name\">body</span>&gt;",
+            "  &lt;<span class=\"comment\">!-- Content goes here --</span>&gt;",
+            "&lt;/<span class=\"tag-name\">body</span>&gt;",
+            "&lt;/<span class=\"tag-name\">html</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Head Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">link</span> <span class=\"attribute\">rel</span>=<span class=\"attribute-value\">\"stylesheet\"</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"style.css\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">script</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"script.js\"</span> <span class=\"attribute\">defer</span>&gt;&lt;/<span class=\"tag-name\">script</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"description\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"A brief description\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">meta</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"keywords\"</span> <span class=\"attribute\">content</span>=<span class=\"attribute-value\">\"html, cheatsheet\"</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "✍️",
+        "card-title": "Text & Typography"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Headings & Paragraphs"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">h1</span>&gt;Main Heading&lt;/<span class=\"tag-name\">h1</span>&gt;",
+            "&lt;<span class=\"tag-name\">h2</span>&gt;Sub Heading&lt;/<span class=\"tag-name\">h2</span>&gt;",
+            "&lt;<span class=\"tag-name\">p</span>&gt;This is a paragraph of text.&lt;/<span class=\"tag-name\">p</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Inline Text Formatting"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">strong</span>&gt;Bold Text&lt;/<span class=\"tag-name\">strong</span>&gt;",
+            "&lt;<span class=\"tag-name\">em</span>&gt;Emphasized Text&lt;/<span class=\"tag-name\">em</span>&gt;",
+            "&lt;<span class=\"tag-name\">mark</span>&gt;Highlighted Text&lt;/<span class=\"tag-name\">mark</span>&gt;",
+            "&lt;<span class=\"tag-name\">del</span>&gt;Deleted Text&lt;/<span class=\"tag-name\">del</span>&gt;",
+            "&lt;<span class=\"tag-name\">ins</span>&gt;Inserted Text&lt;/<span class=\"tag-name\">ins</span>&gt;",
+            "&lt;<span class=\"tag-name\">sup</span>&gt;Superscript&lt;/<span class=\"tag-name\">sup</span>&gt;",
+            "&lt;<span class=\"tag-name\">sub</span>&gt;Subscript&lt;/<span class=\"tag-name\">sub</span>&gt;"
+          ]
+        },
+        {
+          "type": "highlight",
+          "tag": "Semantic",
+          "content": {
+            "type": "code-block",
+            "lines": [
+              "&lt;<span class=\"tag-name\">abbr</span> <span class=\"attribute\">title</span>=<span class=\"attribute-value\">\"HyperText Markup Language\"</span>&gt;HTML&lt;/<span class=\"tag-name\">abbr</span>&gt;",
+              "&lt;<span class=\"tag-name\">blockquote</span> <span class=\"attribute\">cite</span>=<span class=\"attribute-value\">\"url\"</span>&gt;Quote&lt;/<span class=\"tag-name\">blockquote</span>&gt;",
+              "&lt;<span class=\"tag-name\">cite</span>&gt;Work Title&lt;/<span class=\"tag-name\">cite</span>&gt;",
+              "&lt;<span class=\"tag-name\">code</span>&gt;console.log()&lt;/<span class=\"tag-name\">code</span>&gt;"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔗",
+        "card-title": "Links & Images"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Hyperlinks"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">a</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"https://example.com\"</span>&gt;Visit Example&lt;/<span class=\"tag-name\">a</span>&gt;",
+            "&lt;<span class=\"tag-name\">a</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"#section-id\"</span>&gt;Jump to Section&lt;/<span class=\"tag-name\">a</span>&gt;",
+            "&lt;<span class=\"tag-name\">a</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"mailto:test@example.com\"</span>&gt;Email Us&lt;/<span class=\"tag-name\">a</span>&gt;",
+            "&lt;<span class=\"tag-name\">a</span> <span class=\"attribute\">href</span>=<span class=\"attribute-value\">\"tel:+1234567890\"</span>&gt;Call Us&lt;/<span class=\"tag-name\">a</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Images"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">img</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"image.jpg\"</span> <span class=\"attribute\">alt</span>=<span class=\"attribute-value\">\"Description of image\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">img</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"placeholder.png\"</span> <span class=\"attribute\">alt</span>=<span class=\"attribute-value\">\"Placeholder\"</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"100\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"100\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">picture</span>&gt;",
+            "  &lt;<span class=\"tag-name\">source</span> <span class=\"attribute\">srcset</span>=<span class=\"attribute-value\">\"large.jpg\"</span> <span class=\"attribute\">media</span>=<span class=\"attribute-value\">\"(min-width: 800px)\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">img</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"small.jpg\"</span> <span class=\"attribute\">alt</span>=<span class=\"attribute-value\">\"Responsive Image\"</span>&gt;",
+            "&lt;/<span class=\"tag-name\">picture</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📋",
+        "card-title": "Lists"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Unordered List"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">ul</span>&gt;",
+            "  &lt;<span class=\"tag-name\">li</span>&gt;Item 1&lt;/<span class=\"tag-name\">li</span>&gt;",
+            "  &lt;<span class=\"tag-name\">li</span>&gt;Item 2&lt;/<span class=\"tag-name\">li</span>&gt;",
+            "&lt;/<span class=\"tag-name\">ul</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Ordered List"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">ol</span>&gt;",
+            "  &lt;<span class=\"tag-name\">li</span>&gt;First item&lt;/<span class=\"tag-name\">li</span>&gt;",
+            "  &lt;<span class=\"tag-name\">li</span>&gt;Second item&lt;/<span class=\"tag-name\">li</span>&gt;",
+            "&lt;/<span class=\"tag-name\">ol</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Description List"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">dl</span>&gt;",
+            "  &lt;<span class=\"tag-name\">dt</span>&gt;Term&lt;/<span class=\"tag-name\">dt</span>&gt;",
+            "  &lt;<span class=\"tag-name\">dd</span>&gt;Description of the term.&lt;/<span class=\"tag-name\">dd</span>&gt;",
+            "&lt;/<span class=\"tag-name\">dl</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📊",
+        "card-title": "Tables"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic Table"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">table</span>&gt;",
+            "  &lt;<span class=\"tag-name\">caption</span>&gt;Table Caption&lt;/<span class=\"tag-name\">caption</span>&gt;",
+            "  &lt;<span class=\"tag-name\">thead</span>&gt;",
+            "    &lt;<span class=\"tag-name\">tr</span>&gt;",
+            "      &lt;<span class=\"tag-name\">th</span>&gt;Header 1&lt;/<span class=\"tag-name\">th</span>&gt;",
+            "      &lt;<span class=\"tag-name\">th</span>&gt;Header 2&lt;/<span class=\"tag-name\">th</span>&gt;",
+            "    &lt;/<span class=\"tag-name\">tr</span>&gt;",
+            "  &lt;/<span class=\"tag-name\">thead</span>&gt;",
+            "  &lt;<span class=\"tag-name\">tbody</span>&gt;",
+            "    &lt;<span class=\"tag-name\">tr</span>&gt;",
+            "      &lt;<span class=\"tag-name\">td</span>&gt;Data 1&lt;/<span class=\"tag-name\">td</span>&gt;",
+            "      &lt;<span class=\"tag-name\">td</span>&gt;Data 2&lt;/<span class=\"tag-name\">td</span>&gt;",
+            "    &lt;/<span class=\"tag-name\">tr</span>&gt;",
+            "  &lt;/<span class=\"tag-name\">tbody</span>&gt;",
+            "  &lt;<span class=\"tag-name\">tfoot</span>&gt;",
+            "    &lt;<span class=\"tag-name\">tr</span>&gt;",
+            "      &lt;<span class=\"tag-name\">td</span> <span class=\"attribute\">colspan</span>=<span class=\"attribute-value\">\"2\"</span>&gt;Table Footer&lt;/<span class=\"tag-name\">td</span>&gt;",
+            "    &lt;/<span class=\"tag-name\">tr</span>&gt;",
+            "  &lt;/<span class=\"tag-name\">tfoot</span>&gt;",
+            "&lt;/<span class=\"tag-name\">table</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Table Attributes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">th</span> <span class=\"attribute\">scope</span>=<span class=\"attribute-value\">\"col\"</span>&gt;Column Header&lt;/<span class=\"tag-name\">th</span>&gt;",
+            "&lt;<span class=\"tag-name\">th</span> <span class=\"attribute\">scope</span>=<span class=\"attribute-value\">\"row\"</span>&gt;Row Header&lt;/<span class=\"tag-name\">th</span>&gt;",
+            "&lt;<span class=\"tag-name\">td</span> <span class=\"attribute\">rowspan</span>=<span class=\"attribute-value\">\"2\"</span>&gt;Spans 2 rows&lt;/<span class=\"tag-name\">td</span>&gt;",
+            "&lt;<span class=\"tag-name\">td</span> <span class=\"attribute\">colspan</span>=<span class=\"attribute-value\">\"2\"</span>&gt;Spans 2 columns&lt;/<span class=\"tag-name\">td</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📝",
+        "card-title": "Forms"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Basic Form"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">form</span> <span class=\"attribute\">action</span>=<span class=\"attribute-value\">\"/submit\"</span> <span class=\"attribute\">method</span>=<span class=\"attribute-value\">\"post\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">label</span> <span class=\"attribute\">for</span>=<span class=\"attribute-value\">\"name\"</span>&gt;Name:&lt;/<span class=\"tag-name\">label</span>&gt;",
+            "  &lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"text\"</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"name\"</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"name\"</span> <span class=\"attribute\">required</span>&gt;",
+            "  &lt;<span class=\"tag-name\">button</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"submit\"</span>&gt;Submit&lt;/<span class=\"tag-name\">button</span>&gt;",
+            "&lt;/<span class=\"tag-name\">form</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Input Types"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"email\"</span> <span class=\"attribute\">placeholder</span>=<span class=\"attribute-value\">\"Email\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"password\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"number\"</span> <span class=\"attribute\">min</span>=<span class=\"attribute-value\">\"0\"</span> <span class=\"attribute\">max</span>=<span class=\"attribute-value\">\"100\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"date\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"checkbox\"</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"agree\"</span>&gt;&lt;<span class=\"tag-name\">label</span> <span class=\"attribute\">for</span>=<span class=\"attribute-value\">\"agree\"</span>&gt;Agree&lt;/<span class=\"tag-name\">label</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"radio\"</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"gender\"</span> <span class=\"attribute\">value</span>=<span class=\"attribute-value\">\"male\"</span>&gt; Male",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"file\"</span> <span class=\"attribute\">accept</span>=<span class=\"attribute-value\">\".pdf,.doc\"</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Other Form Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">textarea</span> <span class=\"attribute\">rows</span>=<span class=\"attribute-value\">\"5\"</span> <span class=\"attribute\">cols</span>=<span class=\"attribute-value\">\"30\"</span> <span class=\"attribute\">placeholder</span>=<span class=\"attribute-value\">\"Your message\"</span>&gt;&lt;/<span class=\"tag-name\">textarea</span>&gt;",
+            "&lt;<span class=\"tag-name\">select</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"country\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">option</span> <span class=\"attribute\">value</span>=<span class=\"attribute-value\">\"usa\"</span>&gt;USA&lt;/<span class=\"tag-name\">option</span>&gt;",
+            "  &lt;<span class=\"tag-name\">option</span> <span class=\"attribute\">value</span>=<span class=\"attribute-value\">\"can\"</span>&gt;Canada&lt;/<span class=\"tag-name\">option</span>&gt;",
+            "&lt;/<span class=\"tag-name\">select</span>&gt;",
+            "&lt;<span class=\"tag-name\">fieldset</span>&gt;",
+            "  &lt;<span class=\"tag-name\">legend</span>&gt;Contact Info&lt;/<span class=\"tag-name\">legend</span>&gt;",
+            "  &lt;<span class=\"comment\">!-- form elements --</span>&gt;",
+            "&lt;/<span class=\"tag-name\">fieldset</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🧱",
+        "card-title": "Semantic HTML5"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Layout Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">header</span>&gt;Site Header&lt;/<span class=\"tag-name\">header</span>&gt;",
+            "&lt;<span class=\"tag-name\">nav</span>&gt;Navigation Links&lt;/<span class=\"tag-name\">nav</span>&gt;",
+            "&lt;<span class=\"tag-name\">main</span>&gt;Main Content&lt;/<span class=\"tag-name\">main</span>&gt;",
+            "&lt;<span class=\"tag-name\">article</span>&gt;Self-contained Content&lt;/<span class=\"tag-name\">article</span>&gt;",
+            "&lt;<span class=\"tag-name\">section</span>&gt;Thematic Grouping&lt;/<span class=\"tag-name\">section</span>&gt;",
+            "&lt;<span class=\"tag-name\">aside</span>&gt;Sidebar Content&lt;/<span class=\"tag-name\">aside</span>&gt;",
+            "&lt;<span class=\"tag-name\">footer</span>&gt;Site Footer&lt;/<span class=\"tag-name\">footer</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Other Semantic Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">figure</span>&gt;",
+            "  &lt;<span class=\"tag-name\">img</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"diagram.png\"</span> <span class=\"attribute\">alt</span>=<span class=\"attribute-value\">\"Diagram\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">figcaption</span>&gt;A helpful diagram.&lt;/<span class=\"tag-name\">figcaption</span>&gt;",
+            "&lt;/<span class=\"tag-name\">figure</span>&gt;",
+            "&lt;<span class=\"tag-name\">time</span> <span class=\"attribute\">datetime</span>=<span class=\"attribute-value\">\"2023-10-26\"</span>&gt;October 26, 2023&lt;/<span class=\"tag-name\">time</span>&gt;",
+            "&lt;<span class=\"tag-name\">details</span>&gt;",
+            "  &lt;<span class=\"tag-name\">summary</span>&gt;Click to expand&lt;/<span class=\"tag-name\">summary</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span>&gt;More details here.&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "&lt;/<span class=\"tag-name\">details</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📺",
+        "card-title": "Media"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Audio"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">audio</span> <span class=\"attribute\">controls</span>&gt;",
+            "  &lt;<span class=\"tag-name\">source</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"audio.mp3\"</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"audio/mpeg\"</span>&gt;",
+            "  Your browser does not support the audio element.",
+            "&lt;/<span class=\"tag-name\">audio</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Video"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">video</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"320\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"240\"</span> <span class=\"attribute\">controls</span>&gt;",
+            "  &lt;<span class=\"tag-name\">source</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"movie.mp4\"</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"video/mp4\"</span>&gt;",
+            "  Your browser does not support the video tag.",
+            "&lt;/<span class=\"tag-name\">video</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Iframes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">iframe</span> <span class=\"attribute\">src</span>=<span class=\"attribute-value\">\"https://example.com\"</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"600\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"400\"</span> <span class=\"attribute\">allowfullscreen</span>&gt;&lt;/<span class=\"tag-name\">iframe</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⚙️",
+        "card-title": "Miscellaneous"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Comments"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"comment\">!-- This is an HTML comment --</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Special Characters (Entities)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&amp;<span class=\"entity\">lt</span>;  (&lt;)",
+            "&amp;<span class=\"entity\">gt</span>;  (&gt;)",
+            "&amp;<span class=\"entity\">amp</span>; (&amp;)",
+            "&amp;<span class=\"entity\">quot</span>; (\")",
+            "&amp;<span class=\"entity\">apos</span>; (')",
+            "&amp;<span class=\"entity\">nbsp</span>; (non-breaking space)"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Div & Span"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span>&gt;Block-level container&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">span</span>&gt;Inline container&lt;/<span class=\"tag-name\">span</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🌐",
+        "card-title": "Global Attributes"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Common Attributes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"myElement\"</span>&gt;&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">p</span> <span class=\"attribute\">class</span>=<span class=\"attribute-value\">\"text-primary\"</span>&gt;&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "&lt;<span class=\"tag-name\">button</span> <span class=\"attribute\">data-action</span>=<span class=\"attribute-value\">\"submit\"</span>&gt;Click Me&lt;/<span class=\"tag-name\">button</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">tabindex</span>=<span class=\"attribute-value\">\"1\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">contenteditable</span>=<span class=\"attribute-value\">\"true\"</span>&gt;Edit me&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">p</span> <span class=\"attribute\">title</span>=<span class=\"attribute-value\">\"Tooltip text\"</span>&gt;Hover over me&lt;/<span class=\"tag-name\">p</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Language & Direction"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">html</span> <span class=\"attribute\">lang</span>=<span class=\"attribute-value\">\"en-US\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">p</span> <span class=\"attribute\">dir</span>=<span class=\"attribute-value\">\"rtl\"</span>&gt;Right-to-left text&lt;/<span class=\"tag-name\">p</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⚡",
+        "card-title": "HTML Events (Attributes)"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Mouse Events"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">button</span> <span class=\"attribute\">onclick</span>=<span class=\"attribute-value\">\"alert('Clicked!')\"</span>&gt;Click&lt;/<span class=\"tag-name\">button</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">onmouseover</span>=<span class=\"attribute-value\">\"this.style.backgroundColor='lightblue'\"</span>&gt;Hover&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">onmouseout</span>=<span class=\"attribute-value\">\"this.style.backgroundColor='initial'\"</span>&gt;Leave&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Keyboard Events"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"text\"</span> <span class=\"attribute\">onkeydown</span>=<span class=\"attribute-value\">\"console.log('Key Down')\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"text\"</span> <span class=\"attribute\">onkeyup</span>=<span class=\"attribute-value\">\"console.log('Key Up')\"</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Form Events"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"text\"</span> <span class=\"attribute\">onchange</span>=<span class=\"attribute-value\">\"console.log(this.value)\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">form</span> <span class=\"attribute\">onsubmit</span>=<span class=\"attribute-value\">\"alert('Submitted!'); return false;\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">button</span> <span class=\"attribute\">type</span>=<span class=\"attribute-value\">\"submit\"</span>&gt;Submit&lt;/<span class=\"tag-name\">button</span>&gt;",
+            "&lt;/<span class=\"tag-name\">form</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "♿",
+        "card-title": "Accessibility (ARIA)"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "ARIA Roles"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">role</span>=<span class=\"attribute-value\">\"button\"</span> <span class=\"attribute\">tabindex</span>=<span class=\"attribute-value\">\"0\"</span>&gt;Custom Button&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">role</span>=<span class=\"attribute-value\">\"navigation\"</span>&gt;&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">role</span>=<span class=\"attribute-value\">\"alert\"</span>&gt;Error message&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "ARIA States & Properties"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">button</span> <span class=\"attribute\">aria-expanded</span>=<span class=\"attribute-value\">\"false\"</span>&gt;Menu&lt;/<span class=\"tag-name\">button</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">aria-label</span>=<span class=\"attribute-value\">\"Search input\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">aria-labelledby</span>=<span class=\"attribute-value\">\"heading-id\"</span>&gt;&lt;/<span class=\"tag-name\">div</span>&gt;",
+            "&lt;<span class=\"tag-name\">input</span> <span class=\"attribute\">aria-required</span>=<span class=\"attribute-value\">\"true\"</span>&gt;",
+            "&lt;<span class=\"tag-name\">div</span> <span class=\"attribute\">aria-hidden</span>=<span class=\"attribute-value\">\"true\"</span>&gt;Hidden content&lt;/<span class=\"tag-name\">div</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🎨",
+        "card-title": "Graphics (SVG & Canvas)"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "SVG (Scalable Vector Graphics)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">svg</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"100\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"100\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">circle</span> <span class=\"attribute\">cx</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">cy</span>=<span class=\"attribute-value\">\"50\"</span> <span class=\"attribute\">r</span>=<span class=\"attribute-value\">\"40\"</span> <span class=\"attribute\">stroke</span>=<span class=\"attribute-value\">\"green\"</span> <span class=\"attribute\">stroke-width</span>=<span class=\"attribute\">\"4\"</span> <span class=\"attribute\">fill</span>=<span class=\"attribute-value\">\"yellow\"</span> /&gt;",
+            "&lt;/<span class=\"tag-name\">svg</span>&gt;",
+            "&lt;<span class=\"tag-name\">svg</span> <span class=\"attribute\">viewBox</span>=<span class=\"attribute-value\">\"0 0 24 24\"</span> <span class=\"attribute\">fill</span>=<span class=\"attribute-value\">\"currentColor\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">path</span> <span class=\"attribute\">d</span>=<span class=\"attribute-value\">\"M12 2L2 12h10l-10 10h20L12 2z\"</span> /&gt;",
+            "&lt;/<span class=\"tag-name\">svg</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Canvas (Drawing API)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">canvas</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"myCanvas\"</span> <span class=\"attribute\">width</span>=<span class=\"attribute-value\">\"200\"</span> <span class=\"attribute\">height</span>=<span class=\"attribute-value\">\"100\"</span> <span class=\"attribute\">style</span>=<span class=\"attribute-value\">\"border:1px solid #000;\"</span>&gt;&lt;/<span class=\"tag-name\">canvas</span>&gt;",
+            "&lt;<span class=\"tag-name\">script</span>&gt;",
+            "  <span class=\"comment\">// JavaScript to draw on canvas</span>",
+            "  <span class=\"keyword\">const</span> canvas = document.<span class=\"function\">getElementById</span>(<span class=\"string\">'myCanvas'</span>);",
+            "  <span class=\"keyword\">const</span> ctx = canvas.<span class=\"function\">getContext</span>(<span class=\"string\">'2d'</span>);",
+            "  ctx.<span class=\"function\">fillStyle</span> = <span class=\"string\">'#FF0000'</span>;",
+            "  ctx.<span class=\"function\">fillRect</span>(<span class=\"number\">0</span>, <span class=\"number\">0</span>, <span class=\"number\">150</span>, <span class=\"number\">75</span>);",
+            "&lt;/<span class=\"tag-name\">script</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📦",
+        "card-title": "Web Components"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Custom Elements"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">my-custom-element</span> <span class=\"attribute\">attribute-name</span>=<span class=\"attribute-value\">\"value\"</span>&gt;&lt;/<span class=\"tag-name\">my-custom-element</span>&gt;",
+            "&lt;<span class=\"tag-name\">script</span>&gt;",
+            "  <span class=\"keyword\">class</span> <span class=\"function\">MyCustomElement</span> <span class=\"keyword\">extends</span> <span class=\"function\">HTMLElement</span> {",
+            "    <span class=\"function\">constructor</span>() {",
+            "      <span class=\"keyword\">super</span>();",
+            "      <span class=\"keyword\">const</span> shadow = <span class=\"keyword\">this</span>.<span class=\"function\">attachShadow</span>({ <span class=\"attribute\">mode</span>: <span class=\"string\">'open'</span> });",
+            "      shadow.<span class=\"function\">innerHTML</span> = <span class=\"string\">`&lt;p&gt;Hello from custom element!&lt;/p&gt;`</span>;",
+            "    }",
+            "  }",
+            "  customElements.<span class=\"function\">define</span>(<span class=\"string\">'my-custom-element'</span>, <span class=\"function\">MyCustomElement</span>);",
+            "&lt;/<span class=\"tag-name\">script</span>&gt;"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Templates & Slots"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">template</span> <span class=\"attribute\">id</span>=<span class=\"attribute-value\">\"my-template\"</span>&gt;",
+            "  &lt;<span class=\"tag-name\">h2</span>&gt;Template Content&lt;/<span class=\"tag-name\">h2</span>&gt;",
+            "  &lt;<span class=\"tag-name\">slot</span> <span class=\"attribute\">name</span>=<span class=\"attribute-value\">\"header\"</span>&gt;Default Header&lt;/<span class=\"tag-name\">slot</span>&gt;",
+            "  &lt;<span class=\"tag-name\">p</span>&gt;Some text.&lt;/<span class=\"tag-name\">p</span>&gt;",
+            "&lt;/<span class=\"tag-name\">template</span>&gt;",
+            "",
+            "&lt;<span class=\"tag-name\">my-card</span>&gt;",
+            "  &lt;<span class=\"tag-name\">span</span> <span class=\"attribute\">slot</span>=<span class=\"attribute-value\">\"header\"</span>&gt;My Card Title&lt;/<span class=\"tag-name\">span</span>&gt;",
+            "&lt;/<span class=\"tag-name\">my-card</span>&gt;"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🚫",
+        "card-title": "Deprecated/Obsolete"
+      },
+      "content-blocks": [
+        {
+          "type": "description",
+          "content": "Avoid using these tags as they are either deprecated or obsolete in HTML5. Use CSS for styling instead."
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "&lt;<span class=\"tag-name\">center</span>&gt;Use CSS text-align&lt;/<span class=\"tag-name\">center</span>&gt;",
+            "&lt;<span class=\"tag-name\">font</span>&gt;Use CSS font properties&lt;/<span class=\"tag-name\">font</span>&gt;",
+            "&lt;<span class=\"tag-name\">big</span>&gt;Use CSS font-size&lt;/<span class=\"tag-name\">big</span>&gt;",
+            "&lt;<span class=\"tag-name\">strike</span>&gt;Use &lt;<span class=\"tag-name\">del</span>&gt; or CSS text-decoration&lt;/<span class=\"tag-name\">strike</span>&gt;",
+            "&lt;<span class=\"tag-name\">frame</span>&gt;, &lt;<span class=\"tag-name\">frameset</span>&gt;, &lt;<span class=\"tag-name\">noframes</span>&gt; (Use &lt;<span class=\"tag-name\">iframe</span>&gt; or CSS layout)"
+          ]
+        }
+      ]
+    }
+  ]
+}
