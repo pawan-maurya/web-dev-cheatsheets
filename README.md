@@ -17,17 +17,20 @@ A curated collection of modern, visually appealing cheatsheets for web developme
 - **React.js v19 Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/reactjs-v19-cheatsheet/) | Modern Cheatsheet • React js tailored for v19
 - **Tailwind CSS Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/tailwind-css-cheatsheet/) | v4 and v4. New Features added
 - **HTML5 Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/html5-cheatsheet/) | Comprehensive HTML5 Cheatsheet • Covers Essential HTML5 Elements and Concepts.
-- *More cheatsheets coming soon (e.g., HTML, CSS, React, etc.)!*
+- **Git & GitHub Cheatsheet**: 👉 [Visit](https://pawan-maurya.github.io/web-dev-cheatsheets/git-github-cheatsheet/) | Comprehensive Git and GitHub Cheatsheet • Covers Essential Git Commands, Workflows, and GitHub Features.
+- *More cheatsheets coming soon (e.g., CSS, React, Next.js, etc.)!*
 
 *For example:* To view the JavaScript cheatsheet, open `javascript-cheatsheet/index.html` in your browser or visit the hosted version at [JavaScript Cheatsheet](https://pawan-maurya.github.io/web-dev-cheatsheets/javascript-cheatsheet/index.html).
 
 **Preview:**
-![image](https://github.com/user-attachments/assets/1aaa98e0-8619-42eb-a273-c89a96291aaa)
+![image](assets/git-github-cheatsheet-screenshot.png)
 
 
 ## Features
 - **Modern Design**: Dark-themed, trendy UI with responsive layouts for easy reading.
 - **Comprehensive Content**: Covers essential web development topics with concise code snippets.
+- **Search Functionality**: Quickly find topics or keywords within each cheatsheet.
+- **Search Text Highlight**: Instantly highlights matching search terms for easier navigation.
 - **Open Source**: Hosted on GitHub, open for contributions and improvements.
 - **Developer-Friendly**: Structured for quick reference during coding sessions.
 
