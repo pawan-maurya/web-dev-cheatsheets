@@ -1,0 +1,537 @@
+{
+  "header": {
+    "h1": "Git & GitHub",
+    "p": "Modern Cheatsheet • by @<a href=\"https://t.me/CodersMantra\"><img src=\"../assets/CodersMantra-logo-v01.webp\" title=\"@CodersMantra\" alt=\"@CodersMantra\" target=\"_blank\" style=\"height: 27px; vertical-align: -8px;\"></a>"
+  },
+  "cards": [
+    {
+      "card-header": {
+        "card-icon": "🚀",
+        "card-title": "Getting Started"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Install & Setup"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Download Git from git-scm.com</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">--version</span> <span class=\"comment\"># Check version</span>",
+            "",
+            "<span class=\"comment\"># Configure user name and email (global)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> user.<span class=\"attribute\">name</span> <span class=\"string\">\"Your Name\"</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> user.<span class=\"attribute\">email</span> <span class=\"string\">\"your@example.com\"</span>",
+            "",
+            "<span class=\"comment\"># Initialize a new Git repository</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">init</span> <span class=\"comment\"># In current directory</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">init</span> <span class=\"string\">my-project</span> <span class=\"comment\"># In a new directory</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "📝",
+        "card-title": "Basic Commands"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Staging & Committing"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Check status of your working directory</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">status</span>",
+            "",
+            "<span class=\"comment\"># Add files to the staging area</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">add</span> <span class=\"string\">file.txt</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">add</span> <span class=\"operator\">.</span> <span class=\"comment\"># Add all new/modified files</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">add</span> <span class=\"attribute\">--all</span> <span class=\"comment\"># Add all (including deleted)</span>",
+            "",
+            "<span class=\"comment\"># Commit staged changes</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">commit</span> <span class=\"attribute\">-m</span> <span class=\"string\">\"Initial commit\"</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">commit</span> <span class=\"attribute\">-am</span> <span class=\"string\">\"Direct commit (add & commit)\"</span> <span class=\"comment\"># Skips add for tracked files</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Viewing History"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Show commit history</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">log</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">log</span> <span class=\"attribute\">--oneline</span> <span class=\"comment\"># Compact history</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">log</span> <span class=\"attribute\">--graph</span> <span class=\"attribute\">--oneline</span> <span class=\"attribute\">--decorate</span> <span class=\"comment\"># Visual graph</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🌿",
+        "card-title": "Branching"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Branch Management"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># List all branches</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">branch</span> <span class=\"attribute\">-a</span> <span class=\"comment\"># All (local and remote)</span>",
+            "",
+            "<span class=\"comment\"># Create a new branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">branch</span> <span class=\"string\">new-feature</span>",
+            "",
+            "<span class=\"comment\"># Switch to a branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">checkout</span> <span class=\"string\">new-feature</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">switch</span> <span class=\"string\">new-feature</span> <span class=\"comment\"># Modern Git</span>",
+            "",
+            "<span class=\"comment\"># Create and switch to a new branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">checkout</span> <span class=\"attribute\">-b</span> <span class=\"string\">new-feature</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">switch</span> <span class=\"attribute\">-c</span> <span class=\"string\">new-feature</span> <span class=\"comment\"># Modern Git</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Merging Branches"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Merge another branch into your current branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">merge</span> <span class=\"string\">feature-branch</span>",
+            "",
+            "<span class=\"comment\"># Delete a branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">branch</span> <span class=\"attribute\">-d</span> <span class=\"string\">branch-to-delete</span> <span class=\"comment\"># Delete if merged</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">branch</span> <span class=\"attribute\">-D</span> <span class=\"string\">branch-to-delete</span> <span class=\"comment\"># Force delete</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "☁️",
+        "card-title": "Remote Repositories"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Connecting to Remotes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Clone an existing repository</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">clone</span> <span class=\"string\">https://github.com/user/repo.git</span>",
+            "",
+            "<span class=\"comment\"># Add a remote repository</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">remote</span> <span class=\"keyword\">add</span> <span class=\"string\">origin</span> <span class=\"string\">https://github.com/user/repo.git</span>",
+            "",
+            "<span class=\"comment\"># List remotes</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">remote</span> <span class=\"attribute\">-v</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Syncing with Remotes"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Fetch changes from remote (does not merge)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">fetch</span> <span class=\"string\">origin</span>",
+            "",
+            "<span class=\"comment\"># Pull changes from remote (fetch + merge)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">pull</span> <span class=\"string\">origin</span> <span class=\"string\">main</span>",
+            "",
+            "<span class=\"comment\"># Push changes to remote</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">push</span> <span class=\"string\">origin</span> <span class=\"string\">main</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">push</span> <span class=\"attribute\">-u</span> <span class=\"string\">origin</span> <span class=\"string\">new-branch</span> <span class=\"comment\"># Set upstream</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">push</span> <span class=\"attribute\">--delete</span> <span class=\"string\">origin</span> <span class=\"string\">remote-branch</span> <span class=\"comment\"># Delete remote branch</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "↩️",
+        "card-title": "Undoing Changes"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Unstaging & Discarding"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Unstage a file (keep changes in working directory)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">reset</span> <span class=\"string\">HEAD</span> <span class=\"string\">file.txt</span>",
+            "",
+            "<span class=\"comment\"># Discard changes in working directory (untracked files)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">clean</span> <span class=\"attribute\">-df</span>",
+            "",
+            "<span class=\"comment\"># Discard changes in working directory (tracked files)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">checkout</span> <span class=\"attribute\">--</span> <span class=\"string\">file.txt</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">restore</span> <span class=\"string\">file.txt</span> <span class=\"comment\"># Modern Git</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Rewriting History (Use with Caution!)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Revert a commit (creates a new commit that undoes changes)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">revert</span> <span class=\"string\">&lt;commit-hash&gt;</span>",
+            "",
+            "<span class=\"comment\"># Reset to a previous commit (removes subsequent commits)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">reset</span> <span class=\"attribute\">--soft</span> <span class=\"string\">&lt;commit-hash&gt;</span> <span class=\"comment\"># Keep changes staged</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">reset</span> <span class=\"attribute\">--mixed</span> <span class=\"string\">&lt;commit-hash&gt;</span> <span class=\"comment\"># Keep changes unstaged (default)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">reset</span> <span class=\"attribute\">--hard</span> <span class=\"string\">&lt;commit-hash&gt;</span> <span class=\"comment\"># Discard all changes (DANGEROUS!)</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🕵️",
+        "card-title": "Inspecting History & Diffs"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Viewing Diffs"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Show changes in working directory not yet staged</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">diff</span>",
+            "",
+            "<span class=\"comment\"># Show changes in staging area not yet committed</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">diff</span> <span class=\"attribute\">--staged</span>",
+            "",
+            "<span class=\"comment\"># Show changes between two commits</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">diff</span> <span class=\"string\">&lt;commit1&gt;</span> <span class=\"string\">&lt;commit2&gt;</span>",
+            "",
+            "<span class=\"comment\"># Show changes of a specific file between commits</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">diff</span> <span class=\"string\">&lt;commit1&gt;</span> <span class=\"string\">&lt;commit2&gt;</span> <span class=\"string\">file.txt</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Commit Details"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Show details of a specific commit</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">show</span> <span class=\"string\">&lt;commit-hash&gt;</span>",
+            "",
+            "<span class=\"comment\"># Show blame (who changed what line)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">blame</span> <span class=\"string\">file.txt</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🐙",
+        "card-title": "GitHub Basics"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Repository Management"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Create a new repository on GitHub (via UI or GitHub CLI)</span>",
+            "<span class=\"comment\"># gh repo create my-new-repo --public</span>",
+            "",
+            "<span class=\"comment\"># Clone a GitHub repository</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">clone</span> <span class=\"string\">https://github.com/username/repo.git</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Pull Requests (PRs)"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Create a new branch for your feature/fix</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">checkout</span> <span class=\"attribute\">-b</span> <span class=\"string\">feature/my-awesome-feature</span>",
+            "",
+            "<span class=\"comment\"># Make changes, commit, and push your branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">add</span> <span class=\"operator\">.</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">commit</span> <span class=\"attribute\">-m</span> <span class=\"string\">\"feat: Add awesome feature\"</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">push</span> <span class=\"attribute\">-u</span> <span class=\"string\">origin</span> <span class=\"string\">feature/my-awesome-feature</span>",
+            "",
+            "<span class=\"comment\"># Go to GitHub UI to create a Pull Request from your branch</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Issues"
+        },
+        {
+          "type": "description",
+          "content": "Issues are used to track bugs, enhancements, and other tasks. Create them directly on GitHub's UI."
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🤝",
+        "card-title": "Collaboration"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Forking & Contributing"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Fork a repository on GitHub (via UI)</span>",
+            "<span class=\"comment\"># Clone your forked repository</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">clone</span> <span class=\"string\">https://github.com/your-username/original-repo.git</span>",
+            "",
+            "<span class=\"comment\"># Add the original repository as an 'upstream' remote</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">remote</span> <span class=\"keyword\">add</span> <span class=\"string\">upstream</span> <span class=\"string\">https://github.com/original-owner/original-repo.git</span>",
+            "",
+            "<span class=\"comment\"># Fetch and merge changes from upstream (to keep your fork updated)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">fetch</span> <span class=\"string\">upstream</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">merge</span> <span class=\"string\">upstream/main</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Code Review"
+        },
+        {
+          "type": "description",
+          "content": "Pull Requests are the primary mechanism for code review on GitHub. Reviewers can comment on lines of code, suggest changes, and approve/request changes."
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🧙‍♂️",
+        "card-title": "Advanced Git"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Rebasing"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Rebase your current branch onto another branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">rebase</span> <span class=\"string\">main</span>",
+            "",
+            "<span class=\"comment\"># Interactive rebase (to squash, reorder, edit commits)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">rebase</span> <span class=\"attribute\">-i</span> <span class=\"string\">HEAD~3</span> <span class=\"comment\"># Last 3 commits</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Stashing"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Temporarily save changes (unstaged and staged)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">stash</span>",
+            "",
+            "<span class=\"comment\"># Apply the most recent stash and remove it from the stash list</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">stash</span> <span class=\"keyword\">pop</span>",
+            "",
+            "<span class=\"comment\"># List all stashes</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">stash</span> <span class=\"keyword\">list</span>",
+            "",
+            "<span class=\"comment\"># Apply a specific stash (keep it in the list)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">stash</span> <span class=\"keyword\">apply</span> <span class=\"string\">stash@{1}</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Cherry-Picking"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Apply a specific commit from another branch to current branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">cherry-pick</span> <span class=\"string\">&lt;commit-hash&gt;</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🌟",
+        "card-title": "GitHub Advanced"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "GitHub Actions (CI/CD)"
+        },
+        {
+          "type": "description",
+          "content": "Automate workflows like testing, building, and deploying directly from your repository. Configured via <code>.github/workflows/*.yml</code> files."
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Example .github/workflows/ci.yml</span>",
+            "<span class=\"attribute\">name</span>: <span class=\"string\">CI</span>",
+            "<span class=\"attribute\">on</span>: [<span class=\"keyword\">push</span>]",
+            "<span class=\"attribute\">jobs</span>:",
+            "  <span class=\"attribute\">build</span>:",
+            "    <span class=\"attribute\">runs-on</span>: <span class=\"string\">ubuntu-latest</span>",
+            "    <span class=\"attribute\">steps</span>:",
+            "      - <span class=\"attribute\">uses</span>: <span class=\"string\">actions/checkout@v3</span>",
+            "      - <span class=\"attribute\">name</span>: <span class=\"string\">Run tests</span>",
+            "        <span class=\"attribute\">run</span>: <span class=\"string\">npm test</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "GitHub Pages"
+        },
+        {
+          "type": "description",
+          "content": "Host static websites directly from your GitHub repository. Configured in repository settings."
+        },
+        {
+          "type": "section-title",
+          "text": "Gists"
+        },
+        {
+          "type": "description",
+          "content": "Share single files or small code snippets. Think of them as mini-repositories."
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "🔧",
+        "card-title": "Configuration"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Git Config Levels"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Global config (for all repositories of the current user)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">--list</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">user.name</span>",
+            "",
+            "<span class=\"comment\"># Local config (for the current repository only)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--local</span> <span class=\"string\">--list</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--local</span> <span class=\"string\">user.email</span>",
+            "",
+            "<span class=\"comment\"># System config (for all users on the system)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--system</span> <span class=\"string\">core.editor</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Aliases"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Create shortcuts for Git commands</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">alias.co</span> <span class=\"string\">checkout</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">alias.br</span> <span class=\"string\">branch</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">alias.cm</span> <span class=\"string\">'commit -m'</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--global</span> <span class=\"string\">alias.lg</span> <span class=\"string\">\"log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit\"</span>",
+            "",
+            "<span class=\"comment\"># Now use: git co main, git br, git cm \"message\", git lg</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": ".gitignore"
+        },
+        {
+          "type": "description",
+          "content": "A file that specifies intentionally untracked files that Git should ignore. Each line is a pattern."
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Example .gitignore content</span>",
+            "<span class=\"string\">.env</span>",
+            "<span class=\"string\">node_modules/</span>",
+            "<span class=\"string\">*.log</span>",
+            "<span class=\"string\">build/</span>"
+          ]
+        }
+      ]
+    },
+    {
+      "card-header": {
+        "card-icon": "⁉️",
+        "card-title": "Troubleshooting & Tips"
+      },
+      "content-blocks": [
+        {
+          "type": "section-title",
+          "text": "Common Issues"
+        },
+        {
+          "type": "description",
+          "content": "<strong>Merge Conflicts:</strong> Occur when Git cannot automatically reconcile changes. Manually edit files to resolve, then <code>git add .</code> and <code>git commit</code>."
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Abort a merge conflict</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">merge</span> <span class=\"attribute\">--abort</span>",
+            "",
+            "<span class=\"comment\"># Abort a rebase</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">rebase</span> <span class=\"attribute\">--abort</span>"
+          ]
+        },
+        {
+          "type": "section-title",
+          "text": "Useful Commands"
+        },
+        {
+          "type": "code-block",
+          "lines": [
+            "<span class=\"comment\"># Show current configuration</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">config</span> <span class=\"attribute\">--list</span>",
+            "",
+            "<span class=\"comment\"># Open Git documentation for a command</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">help</span> <span class=\"string\">commit</span>",
+            "",
+            "<span class=\"comment\"># See the Git reflog (history of HEAD changes)</span>",
+            "<span class=\"function\">git</span> <span class=\"keyword\">reflog</span> <span class=\"comment\"># Very useful for recovering lost commits/branches</span>"
+          ]
+        }
+      ]
+    }
+  ]
+}
